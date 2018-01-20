@@ -1,0 +1,14 @@
+[Bus Name]
+name=Serial
+[Serial]
+Port=2
+Baud Rate=9600
+Data Bits=8
+Parity=None
+Stop Bits=10
+Flow Control=0
+Char/Record=0
+Termination String=
+ms Wait=0
+Time-out (1000ms)=1000
+Clear Buffer on Open?=FALSE

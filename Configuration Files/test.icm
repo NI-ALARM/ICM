@@ -1,0 +1,84 @@
+[ICM General Parameters]
+Data Stream Name=test
+Version=1
+Author=DT
+Description=test description
+Comments=comments
+Date=0
+Start Time=0
+Location=here
+# of Records=0
+[Bus Name]
+name=Clock Time
+[Serial]
+Port=3
+Baud Rate=9600
+Data Bits=8
+Parity=None
+Stop Bits=10
+Flow Control=0
+Char/Record=1
+Termination String=
+ms Wait=0
+Time-out (1000ms)=1000
+Clear Buffer on Open?=FALSE
+[Clock Time]
+UTC?=TRUE
+[Parser Name]
+name=Time Parser
+[General Parser]
+Format String=sdfsdf
+Channels=<2>
+Channels 0=sdfd
+Channels 1=asdfsadf
+[Time Parser]
+Enabled=<12>
+Enabled 0=TRUE
+Enabled 1=TRUE
+Enabled 2=TRUE
+Enabled 3=TRUE
+Enabled 4=FALSE
+Enabled 5=TRUE
+Enabled 6=TRUE
+Enabled 7=TRUE
+Enabled 8=TRUE
+Enabled 9=TRUE
+Enabled 10=FALSE
+Enabled 11=TRUE
+UTC?=TRUE
+[No Query]
+null=1
+[Query]
+Cycle Time (ms)=1000
+[Lookup Table]
+Tables=<1>
+Tables 0.Cluster.Instance=Simple
+Tables 0.Cluster.Table=<7>
+Tables 0.Cluster.Table 0.Cluster.Raw Value=0
+Tables 0.Cluster.Table 0.Cluster.Sca;ed Value=0
+Tables 0.Cluster.Table 1.Cluster.Raw Value=1
+Tables 0.Cluster.Table 1.Cluster.Sca;ed Value=2
+Tables 0.Cluster.Table 2.Cluster.Raw Value=2
+Tables 0.Cluster.Table 2.Cluster.Sca;ed Value=4
+Tables 0.Cluster.Table 3.Cluster.Raw Value=3
+Tables 0.Cluster.Table 3.Cluster.Sca;ed Value=6
+Tables 0.Cluster.Table 4.Cluster.Raw Value=4
+Tables 0.Cluster.Table 4.Cluster.Sca;ed Value=8
+Tables 0.Cluster.Table 5.Cluster.Raw Value=5
+Tables 0.Cluster.Table 5.Cluster.Sca;ed Value=10
+Tables 0.Cluster.Table 6.Cluster.Raw Value=6
+Tables 0.Cluster.Table 6.Cluster.Sca;ed Value=12
+[Polynomial]
+Polynomials=<1>
+Polynomials 0.Cluster.Instance=HoursInSeconds
+Polynomials 0.Cluster.Polynomial=<2>0,3600
+[Scaling]
+Scalings=<2>
+Scalings 0.Scaling.Channel=Minute
+Scalings 0.Scaling.Scaling=Lookup Table
+Scalings 0.Scaling.Instance=Simple
+Scalings 1.Scaling.Channel=Hour
+Scalings 1.Scaling.Scaling=Polynomial
+Scalings 1.Scaling.Instance=HoursInSeconds
+[Query Name]
+name=No Query

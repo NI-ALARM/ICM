@@ -1,0 +1,50 @@
+[ICM General Parameters]
+Data Stream Name=NI A/D test
+Version=1
+Author=David Thomson
+Description=test the NI A/D bus and no-op parser
+Comments=
+Date=0
+Start Time=0
+Location=
+# of Records=0
+[Query]
+Cycle Time (ms)=1000
+[Bus Name]
+name=NI Analog
+[NI Analog]
+Device=Dev1
+SE/Diff=FALSE
+Channels=<2>
+Channels 0.Channel.Channel=0
+Channels 0.Channel.Range=-10.0 to 10.0 V
+Channels 1.Channel.Channel=1
+Channels 1.Channel.Range=-10.0 to 10.0 V
+AD Read Time-out (s)=0.3
+[Parser Name]
+name=No-op Parser
+[No-op Parser]
+Channels=<2>
+Channels 0=ch0
+Channels 1=ch1
+Enabled=<2>
+Enabled 0=TRUE
+Enabled 1=TRUE
+[Query Name]
+name=No Query
+[No Query]
+null=0
+[Polynomial]
+Polynomials=<2>
+Polynomials 0.Cluster.Instance=double
+Polynomials 0.Cluster.Polynomial=<2>0,2
+Polynomials 1.Cluster.Instance=times 10
+Polynomials 1.Cluster.Polynomial=<2>0,10
+[Scaling]
+Scalings=<2>
+Scalings 0.Scaling.Channel=ch1
+Scalings 0.Scaling.Scaling=Polynomial
+Scalings 0.Scaling.Instance=times 10
+Scalings 1.Scaling.Channel=ch0
+Scalings 1.Scaling.Scaling=Polynomial
+Scalings 1.Scaling.Instance=double

@@ -1,0 +1,98 @@
+[ICM General Parameters]
+Data Stream Name=UDP test
+Version=1
+Author=DT
+Description=This test config expects a simple two channel UDP stream from MICAS-X.
+Comments=no additional comments at this time...
+Date=0
+Start Time=0
+Location=Louisville, CO
+# of Records=0
+[Bus Name]
+name=UDP
+[Serial]
+Port=3
+Baud Rate=9600
+Data Bits=8
+Parity=None
+Stop Bits=10
+Flow Control=0
+Char/Record=1
+Termination String=
+ms Wait=0
+Time-out (1000ms)=1000
+Clear Buffer on Open?=FALSE
+[Clock Time]
+UTC?=TRUE
+[Parser Name]
+name=General Parser
+[General Parser]
+Format String=%f,%f
+Channels=<2>
+Channels 0=Channel 1
+Channels 1=Channel 2
+Enabled=<2>
+Enabled 0=TRUE
+Enabled 1=TRUE
+[Time Parser]
+Enabled=<12>
+Enabled 0=TRUE
+Enabled 1=TRUE
+Enabled 2=TRUE
+Enabled 3=TRUE
+Enabled 4=FALSE
+Enabled 5=TRUE
+Enabled 6=TRUE
+Enabled 7=TRUE
+Enabled 8=TRUE
+Enabled 9=TRUE
+Enabled 10=FALSE
+Enabled 11=TRUE
+UTC?=TRUE
+[No Query]
+null=1
+[Query]
+Cycle Time (ms)=1000
+[Lookup Table]
+Tables=<1>
+Tables 0.Cluster.Instance=Simple
+Tables 0.Cluster.Table=<7>
+Tables 0.Cluster.Table 0.Cluster.Raw Value=0
+Tables 0.Cluster.Table 0.Cluster.Sca;ed Value=0
+Tables 0.Cluster.Table 1.Cluster.Raw Value=1
+Tables 0.Cluster.Table 1.Cluster.Sca;ed Value=2
+Tables 0.Cluster.Table 2.Cluster.Raw Value=2
+Tables 0.Cluster.Table 2.Cluster.Sca;ed Value=4
+Tables 0.Cluster.Table 3.Cluster.Raw Value=3
+Tables 0.Cluster.Table 3.Cluster.Sca;ed Value=6
+Tables 0.Cluster.Table 4.Cluster.Raw Value=4
+Tables 0.Cluster.Table 4.Cluster.Sca;ed Value=8
+Tables 0.Cluster.Table 5.Cluster.Raw Value=5
+Tables 0.Cluster.Table 5.Cluster.Sca;ed Value=10
+Tables 0.Cluster.Table 6.Cluster.Raw Value=6
+Tables 0.Cluster.Table 6.Cluster.Sca;ed Value=12
+[Polynomial]
+Polynomials=<1>
+Polynomials 0.Cluster.Instance=HoursInSeconds
+Polynomials 0.Cluster.Polynomial=<2>0,3600
+[Scaling]
+Scalings=<2>
+Scalings 0.Scaling.Channel=Minute
+Scalings 0.Scaling.Scaling=Lookup Table
+Scalings 0.Scaling.Instance=Simple
+Scalings 1.Scaling.Channel=Hour
+Scalings 1.Scaling.Scaling=Polynomial
+Scalings 1.Scaling.Instance=HoursInSeconds
+[Query Name]
+name=No Query
+[UDP]
+Local Port=1002
+Remote Port=1001
+UDP Packet Size=548
+IP Address=
+Multicast?=FALSE
+Char/Record=0
+Termination String=line*~|.feed
+Read Time-out (ms)=10000
+Write Time-out (ms)=10000
+Time To Live=1
