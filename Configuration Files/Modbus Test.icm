@@ -1,0 +1,45 @@
+[ICM General Parameters]
+Data Stream Name=Modbus Test Stream
+Version=1
+Author=David Thomson
+Description=This configuration is designed to test the Modbus bus class by reading data from the Slave on Desktop VI from the NI example named Modbus Library.lvproj.
+Comments=
+Date=0
+Start Time=0
+Location=Boulder, CO
+# of Records=0
+[Query]
+Cycle Time (ms)=0
+[Bus Name]
+name=Modbus
+[Modbus]
+Port=502
+Modbus Server Name=localhost
+Serial/Ethernet=TRUE
+Baud Rate=0
+Serial Type=RTU
+Unit ID=0
+Parity=0
+Input Channels=<3>
+Input Channels 0.Cluster.Data Type=Boolean
+Input Channels 0.Cluster.Address=0
+Input Channels 1.Cluster.Data Type=Boolean
+Input Channels 1.Cluster.Address=1
+Input Channels 2.Cluster.Data Type=Boolean
+Input Channels 2.Cluster.Address=2
+Don't Swap Words?=TRUE
+[Parser Name]
+name=No-op Parser
+[No-op Parser]
+Channels=<3>
+Channels 0=Bit0
+Channels 1=Bit1
+Channels 2=Bit2
+Enabled=<3>
+Enabled 0=TRUE
+Enabled 1=TRUE
+Enabled 2=TRUE
+[Query Name]
+name=No Query
+[No Query]
+null=0
