@@ -1,12 +1,12 @@
 [ICM General Parameters]
-Data Stream Name=test
+Data Stream Name=Clock Test
 Version=1
 Author=DT
-Description=test description
-Comments=comments
+Description=This configuration file uses the "Clock" bus to test the ICM system.
+Comments=The Clock bus is used to read the computer clock time.
 Date=0
 Start Time=0
-Location=here
+Location=Boulder
 # of Records=0
 [Bus Name]
 name=Clock Time
@@ -23,7 +23,7 @@ ms Wait=0
 Time-out (1000ms)=1000
 Clear Buffer on Open?=FALSE
 [Clock Time]
-UTC?=TRUE
+UTC?=FALSE
 [Parser Name]
 name=Time Parser
 [General Parser]
@@ -37,14 +37,14 @@ Enabled 0=TRUE
 Enabled 1=TRUE
 Enabled 2=TRUE
 Enabled 3=TRUE
-Enabled 4=FALSE
+Enabled 4=TRUE
 Enabled 5=TRUE
 Enabled 6=TRUE
 Enabled 7=TRUE
 Enabled 8=TRUE
-Enabled 9=TRUE
+Enabled 9=FALSE
 Enabled 10=FALSE
-Enabled 11=TRUE
+Enabled 11=FALSE
 UTC?=TRUE
 [No Query]
 null=1
@@ -73,12 +73,6 @@ Polynomials=<1>
 Polynomials 0.Cluster.Instance=HoursInSeconds
 Polynomials 0.Cluster.Polynomial=<2>0,3600
 [Scaling]
-Scalings=<2>
-Scalings 0.Scaling.Channel=Minute
-Scalings 0.Scaling.Scaling=Lookup Table
-Scalings 0.Scaling.Instance=Simple
-Scalings 1.Scaling.Channel=Hour
-Scalings 1.Scaling.Scaling=Polynomial
-Scalings 1.Scaling.Instance=HoursInSeconds
+Scalings=<0>
 [Query Name]
 name=No Query
