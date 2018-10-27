@@ -1,12 +1,12 @@
 [ICM General Parameters]
-Data Stream Name=Clock Test
-Version=1
-Author=DT
-Description=This configuration file uses the "Clock" bus to test the ICM system.
-Comments=The Clock bus is used to read the computer clock time.
-Date=0
-Start Time=0
-Location=Boulder
+Data Stream Name=
+Version=0
+Author=
+Description=
+Comments=
+Date=3617503200
+Time=79449.19926453
+Location=
 # of Records=0
 [Bus Name]
 name=Clock Time

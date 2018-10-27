@@ -4,8 +4,8 @@ Version=1
 Author=DT
 Description=This test config expects a simple two channel UDP stream from MICAS-X.
 Comments=no additional comments at this time...
-Date=0
-Start Time=0
+Date=3617503200
+Time=79162.71831512
 Location=Louisville, CO
 # of Records=0
 [Bus Name]

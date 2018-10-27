@@ -4,8 +4,8 @@ Version=1
 Author=David Thomson
 Description=This configuration is designed to test the Modbus bus class by reading data from the Slave on Desktop VI from the NI example named Modbus Library.lvproj.
 Comments=
-Date=0
-Start Time=0
+Date=3622946400
+Time=78549.56634426
 Location=Boulder, CO
 # of Records=0
 [Query]
