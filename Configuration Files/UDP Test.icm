@@ -1,13 +1,15 @@
 [ICM General Parameters]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
 Data Stream Name=UDP test
 Version=1
 Author=DT
 Description=This test config expects a simple two channel UDP stream from MICAS-X.
 Comments=no additional comments at this time...
-Date=3617503200
-Time=79162.71831512
+Date=3629343600
+Time=83660.24234724
 Location=Louisville, CO
 # of Records=0
+
 [Bus Name]
 name=UDP
 [Serial]

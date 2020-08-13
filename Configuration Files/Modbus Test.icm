@@ -11,8 +11,11 @@ Location=Boulder, CO
 [Query]
 Cycle Time (ms)=0
 [Bus Name]
-name=Modbus
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Value=Modbus
+
 [Modbus]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
 Port=502
 Modbus Server Name=localhost
 Serial/Ethernet=TRUE
@@ -27,7 +30,8 @@ Input Channels 1.Cluster.Data Type=Boolean
 Input Channels 1.Cluster.Address=1
 Input Channels 2.Cluster.Data Type=Boolean
 Input Channels 2.Cluster.Address=2
-Don't Swap Words?=TRUE
+Swap Words?=FALSE
+
 [Parser Name]
 name=No-op Parser
 [No-op Parser]

@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="15008000">
+<Project Type="Project" LVVersion="18008000">
 	<Property Name="CCSymbols" Type="Str">NoSerial,True;</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
 	<Property Name="NI.Project.Description" Type="Str"></Property>
@@ -32,39 +32,38 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Buses" Type="Folder">
-			<Item Name="Bus.lvclass" Type="LVClass" URL="../Bus/Bus.lvclass"/>
 			<Item Name="Clock Time.lvclass" Type="LVClass" URL="../Buses/Clock Time/Clock Time.lvclass"/>
 			<Item Name="NI Analog.lvclass" Type="LVClass" URL="../Buses/NI Analog/NI Analog.lvclass"/>
 			<Item Name="Serial.lvclass" Type="LVClass" URL="../Buses/Serial/Serial.lvclass"/>
 			<Item Name="UDP.lvclass" Type="LVClass" URL="../Buses/UDP/UDP.lvclass"/>
 		</Item>
 		<Item Name="Parsers" Type="Folder">
-			<Item Name="Parser.lvclass" Type="LVClass" URL="../Parser/Parser.lvclass"/>
 			<Item Name="General Parser.lvclass" Type="LVClass" URL="../Parsers/General Parser/General Parser.lvclass"/>
 			<Item Name="Mulit Sentence Parser.lvclass" Type="LVClass" URL="../Parsers/Multi Sentence Parser/Mulit Sentence Parser.lvclass"/>
 			<Item Name="No-op Parser.lvclass" Type="LVClass" URL="../Parsers/No-op Parser/No-op Parser.lvclass"/>
 			<Item Name="Time Parser.lvclass" Type="LVClass" URL="../Parsers/Time Parser/Time Parser.lvclass"/>
 		</Item>
 		<Item Name="Queries" Type="Folder">
-			<Item Name="Query.lvclass" Type="LVClass" URL="../Query/Query.lvclass"/>
 			<Item Name="No Query.lvclass" Type="LVClass" URL="../Queries/No Query/No Query.lvclass"/>
 			<Item Name="Single Query.lvclass" Type="LVClass" URL="../Queries/Single Query/Single Query.lvclass"/>
 			<Item Name="Multiple Queries.lvclass" Type="LVClass" URL="../Queries/Multiple Queries/Multiple Queries.lvclass"/>
 		</Item>
 		<Item Name="Scalings" Type="Folder">
-			<Item Name="Scaling.lvclass" Type="LVClass" URL="../Scaling/Scaling.lvclass"/>
 			<Item Name="Lookup Table.lvclass" Type="LVClass" URL="../Scalings/Lookup Table/Lookup Table.lvclass"/>
 			<Item Name="Polynomial.lvclass" Type="LVClass" URL="../Scalings/Polynomial/Polynomial.lvclass"/>
 		</Item>
 		<Item Name="ICM Configuration Editor.vi" Type="VI" URL="../ICM Configuration Editor.vi"/>
 		<Item Name="Test Program.vi" Type="VI" URL="../Test Program.vi"/>
+		<Item Name="Bus.lvclass" Type="LVClass" URL="../Bus/Bus.lvclass"/>
+		<Item Name="Parser.lvclass" Type="LVClass" URL="../Parser/Parser.lvclass"/>
+		<Item Name="Query.lvclass" Type="LVClass" URL="../Query/Query.lvclass"/>
+		<Item Name="Scaling.lvclass" Type="LVClass" URL="../Scaling/Scaling.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="DTbl Empty Digital.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DTblOps.llb/DTbl Empty Digital.vi"/>
 				<Item Name="DWDT Empty Digital.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DWDTOps.llb/DWDT Empty Digital.vi"/>
 				<Item Name="ex_CorrectErrorChain.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_CorrectErrorChain.vi"/>
 				<Item Name="LVNumericRepresentation.ctl" Type="VI" URL="/&lt;vilib&gt;/numeric/LVNumericRepresentation.ctl"/>
-				<Item Name="New VI Library.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/New VI Library.vi"/>
 				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
 				<Item Name="subFile Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/express/express input/FileDialogBlock.llb/subFile Dialog.vi"/>
 				<Item Name="VariantType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/VariantDataType/VariantType.lvlib"/>
@@ -73,36 +72,7 @@
 				<Item Name="VISA Configure Serial Port (Serial Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Serial Instr).vi"/>
 				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
 				<Item Name="Get LV Class Default Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Default Value.vi"/>
-				<Item Name="DialogType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/DialogType.ctl"/>
-				<Item Name="General Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler.vi"/>
-				<Item Name="DialogTypeEnum.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/DialogTypeEnum.ctl"/>
-				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
-				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
-				<Item Name="Check Special Tags.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Check Special Tags.vi"/>
-				<Item Name="TagReturnType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/TagReturnType.ctl"/>
-				<Item Name="Set String Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set String Value.vi"/>
-				<Item Name="GetRTHostConnectedProp.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetRTHostConnectedProp.vi"/>
-				<Item Name="Error Code Database.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Code Database.vi"/>
-				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
-				<Item Name="Format Message String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Format Message String.vi"/>
-				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
-				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>
-				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
-				<Item Name="Details Display Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Details Display Dialog.vi"/>
-				<Item Name="ErrWarn.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/ErrWarn.ctl"/>
-				<Item Name="eventvkey.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/eventvkey.ctl"/>
 				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
-				<Item Name="Not Found Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Not Found Dialog.vi"/>
-				<Item Name="Three Button Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog.vi"/>
-				<Item Name="Three Button Dialog CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog CORE.vi"/>
-				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
-				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
-				<Item Name="Convert property node font to graphics font.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Convert property node font to graphics font.vi"/>
-				<Item Name="Get Text Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Get Text Rect.vi"/>
-				<Item Name="Get String Text Bounds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Get String Text Bounds.vi"/>
-				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
-				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
-				<Item Name="GetHelpDir.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetHelpDir.vi"/>
 				<Item Name="LVDateTimeRec.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVDateTimeRec.ctl"/>
 				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="UDP Multicast Write-Only Open.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/UDP Multicast Write-Only Open.vi"/>
@@ -246,26 +216,50 @@
 				<Item Name="DAQmx Read (Analog 1D Wfm NChan NSamp Duration).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Analog 1D Wfm NChan NSamp Duration).vi"/>
 				<Item Name="DAQmx Read (Digital Wfm 1Chan NSamp Duration).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Digital Wfm 1Chan NSamp Duration).vi"/>
 				<Item Name="DAQmx Read (Digital 1D Wfm NChan NSamp Duration).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Digital 1D Wfm NChan NSamp Duration).vi"/>
+				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
+				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="Build Array Name.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Build Array Name.vi"/>
-			<Item Name="Build Line.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Build Line.vi"/>
-			<Item Name="Create Directory Chain.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Create Directory Chain.vi"/>
-			<Item Name="Get Cluster Elements.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Get Cluster Elements.vi"/>
-			<Item Name="Get Type Info.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Get Type Info.vi"/>
-			<Item Name="Insert Reserved Error.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Insert Reserved Error.vi"/>
-			<Item Name="Process Array Elements.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Process Array Elements.vi"/>
-			<Item Name="Read Anything.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/Read Anything.vi"/>
-			<Item Name="Read Strings from File.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Read Strings from File.vi"/>
-			<Item Name="Replace Characters.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Replace Characters.vi"/>
-			<Item Name="Suppress Error Code - Array.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Suppress Error Code - Array.vi"/>
-			<Item Name="Suppress Error Code - Scalar.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Suppress Error Code - Scalar.vi"/>
-			<Item Name="Suppress Error Code.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Suppress Error Code.vi"/>
-			<Item Name="Unprocess Array Elements.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Unprocess Array Elements.vi"/>
-			<Item Name="Unreplace Characters.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Unreplace Characters.vi"/>
-			<Item Name="Write Anything.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/Write Anything.vi"/>
-			<Item Name="Write Strings to File.vi" Type="VI" URL="../Configuration/Minimal Read Write Anything/SubVIs/Write Strings to File.vi"/>
-			<Item Name="Polynomial Config.ctl" Type="VI" URL="../Scalings/Polynomial/Polynomial Config.ctl"/>
-			<Item Name="Lookup Table Config.ctl" Type="VI" URL="../Scalings/Lookup Table/Lookup Table Config.ctl"/>
+			<Item Name="user.lib" Type="Folder">
+				<Item Name="MGI Read Anything.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI Read Anything.vi"/>
+				<Item Name="MGI RWA Options Cluster.ctl" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Options Cluster.ctl"/>
+				<Item Name="MGI RWA Read Strings from File.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Read Strings from File.vi"/>
+				<Item Name="MGI Suppress Error Code.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Error Handling/MGI Suppress Error Code.vi"/>
+				<Item Name="MGI Suppress Error Code (Array).vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Error Handling/MGI Suppress Error Code/MGI Suppress Error Code (Array).vi"/>
+				<Item Name="MGI Suppress Error Code (Scalar).vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Error Handling/MGI Suppress Error Code/MGI Suppress Error Code (Scalar).vi"/>
+				<Item Name="MGI RWA String To Anything.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA String To Anything.vi"/>
+				<Item Name="MGI RWA Convertion Direction Enum.ctl" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Convertion Direction Enum.ctl"/>
+				<Item Name="MGI RWA Enque Top Level Data.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Enque Top Level Data.vi"/>
+				<Item Name="MGI RWA Tag Lookup Cluster.ctl" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Tag Lookup Cluster.ctl"/>
+				<Item Name="MGI Windows Regional Ring.ctl" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Windows Get Regional String/MGI Windows Regional Ring.ctl"/>
+				<Item Name="MGI RWA Remove EOLs and Slashes.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Remove EOLs and Slashes.vi"/>
+				<Item Name="MGI Insert Reserved Error.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Error Handling/MGI Insert Reserved Error.vi"/>
+				<Item Name="MGI Windows Get Regional String.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Windows Get Regional String.vi"/>
+				<Item Name="MGI RWA Unreplace Characters.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Unreplace Characters.vi"/>
+				<Item Name="MGI Get Cluster Elements.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Cluster/MGI Get Cluster Elements.vi"/>
+				<Item Name="MGI RWA INI Tag Lookup.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA INI Tag Lookup.vi"/>
+				<Item Name="MGI RWA Anything to String.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Anything to String.vi"/>
+				<Item Name="MGI RWA Replace Characters.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Replace Characters.vi"/>
+				<Item Name="MGI RWA Process Array Elements.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Process Array Elements.vi"/>
+				<Item Name="MGI RWA Get Type Info.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Get Type Info.vi"/>
+				<Item Name="MGI RWA Build Line.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Build Line.vi"/>
+				<Item Name="MGI U8 Data to Hex Str.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI U8 Data to Hex Str.vi"/>
+				<Item Name="MGI RWA Handle Tag or Refnum.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Handle Tag or Refnum.vi"/>
+				<Item Name="MGI Scan From String.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Scan From String.vi"/>
+				<Item Name="MGI Scan From String (CDB).vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Scan From String/MGI Scan From String (CDB).vi"/>
+				<Item Name="MGI Scan From String (CDB[]).vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Scan From String/MGI Scan From String (CDB[]).vi"/>
+				<Item Name="MGI Scan From String (CSG).vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Scan From String/MGI Scan From String (CSG).vi"/>
+				<Item Name="MGI Scan From String (CSG[]).vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Scan From String/MGI Scan From String (CSG[]).vi"/>
+				<Item Name="MGI Scan From String (CXT).vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Scan From String/MGI Scan From String (CXT).vi"/>
+				<Item Name="MGI Scan From String (CXT[]).vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Scan From String/MGI Scan From String (CXT[]).vi"/>
+				<Item Name="MGI Scan From String (DBL[]).vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Scan From String/MGI Scan From String (DBL[]).vi"/>
+				<Item Name="MGI RWA Unprocess Array Elements.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Unprocess Array Elements.vi"/>
+				<Item Name="MGI RWA Build Array Name.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Build Array Name.vi"/>
+				<Item Name="MGI Hex Str to U8 Data.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/String/MGI Hex Str to U8 Data.vi"/>
+				<Item Name="MGI Write Anything.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI Write Anything.vi"/>
+				<Item Name="MGI RWA Write Strings to File.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI RWA Write Strings to File.vi"/>
+				<Item Name="MGI Create Directory Chain.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/File/MGI Create Directory Chain.vi"/>
+				<Item Name="MGI Create Directory Chain Behavior Enum.ctl" Type="VI" URL="/&lt;userlib&gt;/_MGI/File/MGI Create Directory Chain Behavior Enum.ctl"/>
+			</Item>
 			<Item Name="ICM Interpolate Arrays.vi" Type="VI" URL="../Scalings/Lookup Table/ICM Interpolate Arrays.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="Scaling Def.ctl" Type="VI" URL="../Scaling/Scaling Def.ctl"/>
@@ -276,6 +270,11 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="No-op Parser Config.ctl" Type="VI" URL="../Parsers/No-op Parser/No-op Parser Config.ctl"/>
+			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Lookup Table Config.ctl" Type="VI" URL="../Scalings/Lookup Table/Lookup Table Config.ctl"/>
+			<Item Name="Polynomial Config.ctl" Type="VI" URL="../Scalings/Polynomial/Polynomial Config.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="ICM Tester" Type="EXE">
@@ -287,71 +286,44 @@
 				<Property Name="Bld_buildCacheID" Type="Str">{5871496E-FF73-4EAC-96B4-34C775508966}</Property>
 				<Property Name="Bld_buildSpecName" Type="Str">ICM Tester</Property>
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
-				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
-				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">/C/LabVIEW 2015 Builds/ICM Tester</Property>
-				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">/C/LabVIEW 2018 Builds/NI_AB_PROJECTNAME/Executables</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{E9BA2078-4799-4DD5-BE90-3CBBD87E8A12}</Property>
-				<Property Name="Bld_version.build" Type="Int">6</Property>
+				<Property Name="Bld_version.build" Type="Int">32</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">ICM Tester.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">/C/LabVIEW 2015 Builds/ICM Tester/ICM Tester.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">/C/LabVIEW 2018 Builds/NI_AB_PROJECTNAME/Executables/ICM Tester.exe</Property>
 				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">/C/LabVIEW 2015 Builds/ICM Tester/data</Property>
+				<Property Name="Destination[1].path" Type="Path">/C/LabVIEW 2018 Builds/NI_AB_PROJECTNAME/Executables/data</Property>
 				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{875A9594-8D0C-4650-8145-49616BBD4264}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{860741DF-20F8-42CA-83CE-E766CEE3F4CF}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Test Program.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
-				<Property Name="Source[10].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[10].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[10].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[10].itemID" Type="Ref">/My Computer/Queries</Property>
-				<Property Name="Source[10].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[10].type" Type="Str">Container</Property>
-				<Property Name="Source[11].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[11].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[11].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[11].itemID" Type="Ref">/My Computer/Scalings</Property>
-				<Property Name="Source[11].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[11].type" Type="Str">Container</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Buses/Clock Time.lvclass</Property>
 				<Property Name="Source[2].type" Type="Str">Library</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Buses/Bus.lvclass</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Bus.lvclass</Property>
 				<Property Name="Source[3].type" Type="Str">Library</Property>
 				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[4].itemID" Type="Ref">/My Computer/Buses/NI Analog.lvclass</Property>
 				<Property Name="Source[4].type" Type="Str">Library</Property>
-				<Property Name="Source[5].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[5].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref">/My Computer/Buses</Property>
-				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[5].type" Type="Str">Container</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/Buses/Serial.lvclass</Property>
+				<Property Name="Source[5].type" Type="Str">Library</Property>
 				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[6].itemID" Type="Ref">/My Computer/Buses/Serial.lvclass</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/Buses/UDP.lvclass</Property>
 				<Property Name="Source[6].type" Type="Str">Library</Property>
 				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[7].itemID" Type="Ref">/My Computer/Buses/UDP.lvclass</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/My Computer/Parser.lvclass</Property>
 				<Property Name="Source[7].type" Type="Str">Library</Property>
-				<Property Name="Source[8].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[8].itemID" Type="Ref">/My Computer/Parsers/Parser.lvclass</Property>
-				<Property Name="Source[8].type" Type="Str">Library</Property>
-				<Property Name="Source[9].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[9].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Parsers</Property>
-				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[9].type" Type="Str">Container</Property>
-				<Property Name="SourceCount" Type="Int">12</Property>
+				<Property Name="SourceCount" Type="Int">8</Property>
 				<Property Name="TgtF_companyName" Type="Str">Original Code Consulting</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">ICM Tester</Property>
 				<Property Name="TgtF_internalName" Type="Str">ICM Tester</Property>
@@ -359,6 +331,134 @@
 				<Property Name="TgtF_productName" Type="Str">ICM Tester</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{8F0E782A-6C2E-4554-865B-91E713D6C22F}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">ICM Tester.exe</Property>
+			</Item>
+			<Item Name="ICM Source Distributions" Type="Source Distribution">
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{43348493-024E-4789-8ED0-4C6D2F6F42A5}</Property>
+				<Property Name="Bld_buildSpecDescription" Type="Str">This build spec builds all the ICM plug-ins and puts them in the Source Distributions folder for use with .exe programs that use ICM.</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">ICM Source Distributions</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../Source Distributions</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{F13B94CE-39DA-4871-A8DB-0733E819ACA4}</Property>
+				<Property Name="Bld_version.build" Type="Int">6</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
+				<Property Name="Destination[0].path" Type="Path">../Source Distributions</Property>
+				<Property Name="Destination[0].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">../Source Distributions/data</Property>
+				<Property Name="Destination[1].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[2].destName" Type="Str">Buses</Property>
+				<Property Name="Destination[2].path" Type="Path">../Source Distributions/Buses</Property>
+				<Property Name="Destination[2].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[3].destName" Type="Str">Parsers</Property>
+				<Property Name="Destination[3].path" Type="Path">../Source Distributions/Parsers</Property>
+				<Property Name="Destination[3].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[4].destName" Type="Str">Queries</Property>
+				<Property Name="Destination[4].path" Type="Path">../Source Distributions/Queries</Property>
+				<Property Name="Destination[4].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[5].destName" Type="Str">Scalings</Property>
+				<Property Name="Destination[5].path" Type="Path">../Source Distributions/Scalings</Property>
+				<Property Name="Destination[5].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[6].destName" Type="Str">Bus</Property>
+				<Property Name="Destination[6].path" Type="Path">../Source Distributions/Bus</Property>
+				<Property Name="Destination[6].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[7].destName" Type="Str">Parser</Property>
+				<Property Name="Destination[7].path" Type="Path">../Source Distributions/Parser</Property>
+				<Property Name="Destination[7].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[8].destName" Type="Str">Query</Property>
+				<Property Name="Destination[8].path" Type="Path">../Source Distributions/Query</Property>
+				<Property Name="Destination[8].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[9].destName" Type="Str">Scaling</Property>
+				<Property Name="Destination[9].path" Type="Path">../Source Distributions/Scaling</Property>
+				<Property Name="Destination[9].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="DestinationCount" Type="Int">10</Property>
+				<Property Name="Source[0].itemID" Type="Str">{6767C708-BAA4-4B81-8780-BEF193906D1A}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[1].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[1].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">2</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Buses</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[1].type" Type="Str">Container</Property>
+				<Property Name="Source[10].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[10].itemID" Type="Ref">/My Computer/Buses/NI Analog.lvclass</Property>
+				<Property Name="Source[10].type" Type="Str">Library</Property>
+				<Property Name="Source[11].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[11].itemID" Type="Ref">/My Computer/Buses/Serial.lvclass</Property>
+				<Property Name="Source[11].type" Type="Str">Library</Property>
+				<Property Name="Source[12].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[12].itemID" Type="Ref">/My Computer/Buses/UDP.lvclass</Property>
+				<Property Name="Source[12].type" Type="Str">Library</Property>
+				<Property Name="Source[13].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[13].itemID" Type="Ref">/My Computer/Parsers/General Parser.lvclass</Property>
+				<Property Name="Source[13].type" Type="Str">Library</Property>
+				<Property Name="Source[14].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[14].itemID" Type="Ref">/My Computer/Parsers/Mulit Sentence Parser.lvclass</Property>
+				<Property Name="Source[14].type" Type="Str">Library</Property>
+				<Property Name="Source[15].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[15].itemID" Type="Ref">/My Computer/Parsers/No-op Parser.lvclass</Property>
+				<Property Name="Source[15].type" Type="Str">Library</Property>
+				<Property Name="Source[16].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[16].itemID" Type="Ref">/My Computer/Parsers/Time Parser.lvclass</Property>
+				<Property Name="Source[16].type" Type="Str">Library</Property>
+				<Property Name="Source[17].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[17].itemID" Type="Ref">/My Computer/Queries/No Query.lvclass</Property>
+				<Property Name="Source[17].type" Type="Str">Library</Property>
+				<Property Name="Source[18].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[18].itemID" Type="Ref">/My Computer/Queries/Single Query.lvclass</Property>
+				<Property Name="Source[18].type" Type="Str">Library</Property>
+				<Property Name="Source[19].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[19].itemID" Type="Ref">/My Computer/Queries/Multiple Queries.lvclass</Property>
+				<Property Name="Source[19].type" Type="Str">Library</Property>
+				<Property Name="Source[2].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[2].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[2].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">3</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/Parsers</Property>
+				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[2].type" Type="Str">Container</Property>
+				<Property Name="Source[20].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[20].itemID" Type="Ref">/My Computer/Scalings/Lookup Table.lvclass</Property>
+				<Property Name="Source[20].type" Type="Str">Library</Property>
+				<Property Name="Source[21].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[21].itemID" Type="Ref">/My Computer/Scalings/Polynomial.lvclass</Property>
+				<Property Name="Source[21].type" Type="Str">Library</Property>
+				<Property Name="Source[3].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[3].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[3].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">4</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/Queries</Property>
+				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[3].type" Type="Str">Container</Property>
+				<Property Name="Source[4].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[4].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[4].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[4].destinationIndex" Type="Int">5</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/Scalings</Property>
+				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[4].type" Type="Str">Container</Property>
+				<Property Name="Source[5].destinationIndex" Type="Int">6</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/Bus.lvclass</Property>
+				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[5].type" Type="Str">Library</Property>
+				<Property Name="Source[6].destinationIndex" Type="Int">7</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/Parser.lvclass</Property>
+				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[6].type" Type="Str">Library</Property>
+				<Property Name="Source[7].destinationIndex" Type="Int">8</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/My Computer/Query.lvclass</Property>
+				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[7].type" Type="Str">Library</Property>
+				<Property Name="Source[8].destinationIndex" Type="Int">9</Property>
+				<Property Name="Source[8].itemID" Type="Ref">/My Computer/Scaling.lvclass</Property>
+				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[8].type" Type="Str">Library</Property>
+				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Buses/Clock Time.lvclass</Property>
+				<Property Name="Source[9].type" Type="Str">Library</Property>
+				<Property Name="SourceCount" Type="Int">22</Property>
 			</Item>
 		</Item>
 	</Item>

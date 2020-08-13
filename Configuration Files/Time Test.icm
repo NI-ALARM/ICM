@@ -1,13 +1,15 @@
 [ICM General Parameters]
-Data Stream Name=
-Version=0
-Author=
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Data Stream Name=Computer Time
+Version=1
+Author=David Thomson
 Description=
 Comments=
-Date=3617503200
-Time=79449.19926453
+Date=3678328800
+Time=59648.54307127
 Location=
 # of Records=0
+
 [Bus Name]
 name=Clock Time
 [Serial]
@@ -69,10 +71,16 @@ Tables 0.Cluster.Table 5.Cluster.Sca;ed Value=10
 Tables 0.Cluster.Table 6.Cluster.Raw Value=6
 Tables 0.Cluster.Table 6.Cluster.Sca;ed Value=12
 [Polynomial]
-Polynomials=<1>
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Polynomials=<2>
 Polynomials 0.Cluster.Instance=HoursInSeconds
 Polynomials 0.Cluster.Polynomial=<2>0,3600
+Polynomials 1.Cluster.Instance=DecimalMinutes
+Polynomials 1.Cluster.Polynomial=<2>0,0.01666666
+
 [Scaling]
-Scalings=<0>
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Value=<0>
+
 [Query Name]
 name=No Query
