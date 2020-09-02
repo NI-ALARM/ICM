@@ -11,7 +11,7 @@ Location=
 # of Records=0
 
 [Bus Name]
-name=Clock Time
+Value=Clock Time
 [Serial]
 Port=3
 Baud Rate=9600
@@ -27,7 +27,7 @@ Clear Buffer on Open?=FALSE
 [Clock Time]
 UTC?=FALSE
 [Parser Name]
-name=Time Parser
+Value=Time Parser
 [General Parser]
 Format String=sdfsdf
 Channels=<2>
@@ -83,4 +83,4 @@ MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#
 Value=<0>
 
 [Query Name]
-name=No Query
+Value=No Query

@@ -11,7 +11,7 @@ Location=Louisville, CO
 # of Records=0
 
 [Bus Name]
-name=UDP
+Value=UDP
 [Serial]
 Port=3
 Baud Rate=9600
@@ -27,7 +27,7 @@ Clear Buffer on Open?=FALSE
 [Clock Time]
 UTC?=TRUE
 [Parser Name]
-name=General Parser
+Value=General Parser
 [General Parser]
 Format String=%f,%f
 Channels=<2>
@@ -86,7 +86,7 @@ Scalings 1.Scaling.Channel=Hour
 Scalings 1.Scaling.Scaling=Polynomial
 Scalings 1.Scaling.Instance=HoursInSeconds
 [Query Name]
-name=No Query
+Value=No Query
 [UDP]
 Local Port=1002
 Remote Port=1001
