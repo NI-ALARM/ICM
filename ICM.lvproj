@@ -36,7 +36,7 @@
 			<Item Name="NI Analog.lvclass" Type="LVClass" URL="../Buses/NI Analog/NI Analog.lvclass"/>
 			<Item Name="Serial.lvclass" Type="LVClass" URL="../Buses/Serial/Serial.lvclass"/>
 			<Item Name="UDP.lvclass" Type="LVClass" URL="../Buses/UDP/UDP.lvclass"/>
-			<Item Name="Modbus.lvclass" Type="LVClass" URL="../../../ICM/Buses/Modbus/Modbus.lvclass"/>
+			<Item Name="Modbus.lvclass" Type="LVClass" URL="../Buses/Modbus/Modbus.lvclass"/>
 		</Item>
 		<Item Name="Parsers" Type="Folder">
 			<Item Name="General Parser.lvclass" Type="LVClass" URL="../Parsers/General Parser/General Parser.lvclass"/>
@@ -219,8 +219,8 @@
 				<Item Name="DAQmx Read (Digital 1D Wfm NChan NSamp Duration).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Digital 1D Wfm NChan NSamp Duration).vi"/>
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
-				<Item Name="Modbus Master.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Modbus/master/Modbus Master.lvclass"/>
 				<Item Name="SubVIs.lvlib" Type="Library" URL="/&lt;vilib&gt;/Modbus/subvis/SubVIs.lvlib"/>
+				<Item Name="Modbus Master.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Modbus/master/Modbus Master.lvclass"/>
 			</Item>
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="MGI Read Anything.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI Read Anything.vi"/>
@@ -278,8 +278,8 @@
 			</Item>
 			<Item Name="Lookup Table Config.ctl" Type="VI" URL="../Scalings/Lookup Table/Lookup Table Config.ctl"/>
 			<Item Name="Polynomial Config.ctl" Type="VI" URL="../Scalings/Polynomial/Polynomial Config.ctl"/>
-			<Item Name="Modbus Data Type.ctl" Type="VI" URL="../../../MICAS-X/Common/Modbus Data Type.ctl"/>
-			<Item Name="Modbus Config.ctl" Type="VI" URL="../../../ICM/Buses/Modbus/Modbus Config.ctl"/>
+			<Item Name="Modbus Config.ctl" Type="VI" URL="../Buses/Modbus/Modbus Config.ctl"/>
+			<Item Name="ICM Modbus Data Type.ctl" Type="VI" URL="../Buses/Modbus/ICM Modbus Data Type.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="ICM Tester" Type="EXE">

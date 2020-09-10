@@ -5,13 +5,13 @@ Version=1
 Author=DT
 Description=This test config expects a simple two channel UDP stream from MICAS-X.
 Comments=no additional comments at this time...
-Date=3629343600
-Time=83660.24234724
+Date=3682389600
+Time=41088.10503054
 Location=Louisville, CO
 # of Records=0
 
 [Bus Name]
-Value=UDP
+name=UDP
 [Serial]
 Port=3
 Baud Rate=9600
@@ -27,8 +27,11 @@ Clear Buffer on Open?=FALSE
 [Clock Time]
 UTC?=TRUE
 [Parser Name]
-Value=General Parser
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=General Parser
+
 [General Parser]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
 Format String=%f,%f
 Channels=<2>
 Channels 0=Channel 1
@@ -36,6 +39,7 @@ Channels 1=Channel 2
 Enabled=<2>
 Enabled 0=TRUE
 Enabled 1=TRUE
+
 [Time Parser]
 Enabled=<12>
 Enabled 0=TRUE
@@ -86,7 +90,7 @@ Scalings 1.Scaling.Channel=Hour
 Scalings 1.Scaling.Scaling=Polynomial
 Scalings 1.Scaling.Instance=HoursInSeconds
 [Query Name]
-Value=No Query
+name=No Query
 [UDP]
 Local Port=1002
 Remote Port=1001
