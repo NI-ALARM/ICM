@@ -1,0 +1,12 @@
+
+[ICM General Parameters]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Data Stream Name=
+Version=0
+Author=
+Description=
+Comments=
+Date=3681784800
+Time=58605.17562246
+Location=
+# of Records=0

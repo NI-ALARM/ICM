@@ -1,0 +1,42 @@
+
+[ICM General Parameters]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Data Stream Name=GPS GGA Data
+Version=0
+Author=
+Description=
+Comments=
+Date=3681871200
+Time=43134.17559052
+Location=
+# of Records=0
+
+[Query Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Value=No Query
+
+[No Query]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+null=0
+
+[Query]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Value=1000
+
+[Bus Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Value=Serial
+
+[Serial]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Port=4
+Baud Rate=115200
+Data Bits=8
+Parity=None
+Stop Bits=10
+Flow Control=0
+Char/Record=0
+Termination String=
+ms Wait=1000
+Time-out (1000ms)=1000
+Clear Buffer on Open?=FALSE
