@@ -6,10 +6,10 @@ Version=0
 Author=Davita
 Description=GPS data 
 Comments=
-Date=3683512800
-Time=54808.78734255
+Date=3688614000
+Time=34595.98933935
 Location=
-# of Records=0
+# of Records=2435
 
 [Query Name]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
@@ -25,7 +25,7 @@ name=Serial
 
 [Serial]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
-Port=4
+Port=3
 Baud Rate=115200
 Data Bits=8
 Parity=None
@@ -33,7 +33,7 @@ Stop Bits=10
 Flow Control=0
 Char/Record=0
 Termination String=
-ms Wait=1000
+ms Wait=995
 Time-out (1000ms)=1000
 Clear Buffer on Open?=FALSE
 
@@ -43,7 +43,7 @@ name=Multi Sentence Parser
 
 [Multi Sentence Parser]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
-Sentences=<6>
+Sentences=<7>
 Sentences 0.Sentence.Sentence ID=$GPRMC
 Sentences 0.Sentence.Format String=$GPRMC,%f,%s,%f,%s,%f,%s,%s,%f,%f,%f,%s
 Sentences 0.Sentence.Channels=<7>
@@ -152,7 +152,7 @@ Sentences 3.Sentence.Channels 14=Sat Elev 4
 Sentences 3.Sentence.Channels 15=Sat Az 4
 Sentences 3.Sentence.Channels 16=Signal to Noise 4
 Sentences 3.Sentence.Enabled=<17>
-Sentences 3.Sentence.Enabled 0=TRUE
+Sentences 3.Sentence.Enabled 0=FALSE
 Sentences 3.Sentence.Enabled 1=TRUE
 Sentences 3.Sentence.Enabled 2=TRUE
 Sentences 3.Sentence.Enabled 3=TRUE
@@ -191,7 +191,7 @@ Sentences 4.Sentence.Channels 14=Sat Elev 8
 Sentences 4.Sentence.Channels 15=Sat Az 8
 Sentences 4.Sentence.Channels 16=Signal to Noise 8
 Sentences 4.Sentence.Enabled=<17>
-Sentences 4.Sentence.Enabled 0=TRUE
+Sentences 4.Sentence.Enabled 0=FALSE
 Sentences 4.Sentence.Enabled 1=TRUE
 Sentences 4.Sentence.Enabled 2=TRUE
 Sentences 4.Sentence.Enabled 3=TRUE
@@ -230,7 +230,7 @@ Sentences 5.Sentence.Channels 14=Sat Elev 12
 Sentences 5.Sentence.Channels 15=Sat Az 12
 Sentences 5.Sentence.Channels 16=Signal to Noise 12
 Sentences 5.Sentence.Enabled=<17>
-Sentences 5.Sentence.Enabled 0=TRUE
+Sentences 5.Sentence.Enabled 0=FALSE
 Sentences 5.Sentence.Enabled 1=TRUE
 Sentences 5.Sentence.Enabled 2=TRUE
 Sentences 5.Sentence.Enabled 3=TRUE
@@ -248,6 +248,13 @@ Sentences 5.Sentence.Enabled 14=TRUE
 Sentences 5.Sentence.Enabled 15=TRUE
 Sentences 5.Sentence.Enabled 16=TRUE
 Sentences 5.Sentence.Ignore Missing Sentences?=TRUE
+Sentences 6.Sentence.Sentence ID=$GPVTG
+Sentences 6.Sentence.Format String=$GPVTG,%d
+Sentences 6.Sentence.Channels=<1>
+Sentences 6.Sentence.Channels 0=GPVTG present?
+Sentences 6.Sentence.Enabled=<1>
+Sentences 6.Sentence.Enabled 0=TRUE
+Sentences 6.Sentence.Ignore Missing Sentences?=TRUE
 
 [Query]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
@@ -314,8 +321,56 @@ name=String Init
 
 [String Init]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
-String=$PGRMO,GPVTG,0*hhcarriage*~|.returnline*~|.feed
+String=$PGRMO,GPVTG,1*24carriage*~|.returnline*~|.feed
 
 [No Init]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
 null=0
+
+[Output Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=No Output
+
+[NI Analog Out]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Device=cDAQ1Mod4
+SE/Diff=FALSE
+Channels=<3>
+Channels 0.Channel.Channel=0
+Channels 0.Channel.Range=-10.0 to 10.0 V
+Channels 1.Channel.Channel=1
+Channels 1.Channel.Range=-10.0 to 10.0 V
+Channels 2.Channel.Channel=2
+Channels 2.Channel.Range=-10.0 to 10.0 V
+AD Write Time-out (s)=0
+Channel Names=<3>
+Channel Names 0=ao1
+Channel Names 1=ao2
+Channel Names 2=ao3
+Enabled=<3>
+Enabled 0=TRUE
+Enabled 1=TRUE
+Enabled 2=TRUE
+
+[No Output]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+null=0
+
+[NI Analog]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Device=
+SE/Diff=FALSE
+Channels=<0>
+AD Read Time-out (s)=0
+
+[Serial Out]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+String=
+Channel Names=<0>
+Enabled=<0>
+
+[Multiple Queries]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Queries=<0>
+Time Between Queries (ms)=0
+Response Separator=
