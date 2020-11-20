@@ -6,8 +6,8 @@ Version=0
 Author=Davita
 Description=GPS data 
 Comments=
-Date=3688614000
-Time=34595.98933935
+Date=3688700400
+Time=49357.08556461
 Location=
 # of Records=2435
 
@@ -317,7 +317,7 @@ Swap Words?=FALSE
 
 [Initializer Name]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
-name=String Init
+name=No Init
 
 [String Init]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
