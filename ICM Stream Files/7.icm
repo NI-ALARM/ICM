@@ -1,0 +1,953 @@
+
+[ICM General Parameters]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Data Stream Name=GPS GGA data
+Version=0
+Author=Davita
+Description=GPS data 
+Comments=
+Date=3687145200
+Time=36074.51871347
+Location=
+# of Records=78
+
+[Query Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=No Query
+
+[No Query]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+null=0
+
+[Bus Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=Serial
+
+[Serial]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Port=4
+Baud Rate=115200
+Data Bits=8
+Parity=None
+Stop Bits=10
+Flow Control=0
+Char/Record=0
+Termination String=
+ms Wait=1000
+Time-out (1000ms)=1000
+Clear Buffer on Open?=FALSE
+
+[Parser Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=Multi Sentence Parser
+
+[Multi Sentence Parser]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Sentences=<7>
+Sentences 0.Sentence.Sentence ID=$GPRMC
+Sentences 0.Sentence.Format String=$GPRMC,%f,%s,%f,%s,%f,%s,%s,%f,%f,%f,%s
+Sentences 0.Sentence.Channels=<7>
+Sentences 0.Sentence.Channels 0=UTC Time
+Sentences 0.Sentence.Channels 1=Latitiude
+Sentences 0.Sentence.Channels 2=Longititude
+Sentences 0.Sentence.Channels 3=Course Over Ground
+Sentences 0.Sentence.Channels 4=UTS Date of Pos
+Sentences 0.Sentence.Channels 5=Magnetic Variation
+Sentences 0.Sentence.Channels 6=
+Sentences 0.Sentence.Enabled=<7>
+Sentences 0.Sentence.Enabled 0=TRUE
+Sentences 0.Sentence.Enabled 1=TRUE
+Sentences 0.Sentence.Enabled 2=TRUE
+Sentences 0.Sentence.Enabled 3=TRUE
+Sentences 0.Sentence.Enabled 4=TRUE
+Sentences 0.Sentence.Enabled 5=TRUE
+Sentences 0.Sentence.Enabled 6=FALSE
+Sentences 0.Sentence.Ignore Missing Sentences?=TRUE
+Sentences 1.Sentence.Sentence ID=$GPGGA
+Sentences 1.Sentence.Format String=$GPGGA,%2d%2d%2d,%f,%s,%f,%s,%f,%f,%f,%f,%f,%s,%s,%s
+Sentences 1.Sentence.Channels=<10>
+Sentences 1.Sentence.Channels 0=Hour
+Sentences 1.Sentence.Channels 1=Minute
+Sentences 1.Sentence.Channels 2=Second
+Sentences 1.Sentence.Channels 3=Lat
+Sentences 1.Sentence.Channels 4=Long
+Sentences 1.Sentence.Channels 5=Quality
+Sentences 1.Sentence.Channels 6=Satellites
+Sentences 1.Sentence.Channels 7=Horizontal Dilution
+Sentences 1.Sentence.Channels 8=Antenna Height
+Sentences 1.Sentence.Channels 9=Geoidal Height
+Sentences 1.Sentence.Enabled=<10>
+Sentences 1.Sentence.Enabled 0=TRUE
+Sentences 1.Sentence.Enabled 1=TRUE
+Sentences 1.Sentence.Enabled 2=TRUE
+Sentences 1.Sentence.Enabled 3=TRUE
+Sentences 1.Sentence.Enabled 4=TRUE
+Sentences 1.Sentence.Enabled 5=TRUE
+Sentences 1.Sentence.Enabled 6=TRUE
+Sentences 1.Sentence.Enabled 7=TRUE
+Sentences 1.Sentence.Enabled 8=TRUE
+Sentences 1.Sentence.Enabled 9=TRUE
+Sentences 1.Sentence.Ignore Missing Sentences?=TRUE
+Sentences 2.Sentence.Sentence ID=$GPGSA
+Sentences 2.Sentence.Format String=$GPGSA,%s,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%s
+Sentences 2.Sentence.Channels=<19>
+Sentences 2.Sentence.Channels 0=Fix Type
+Sentences 2.Sentence.Channels 1=PRN1
+Sentences 2.Sentence.Channels 2=PRN2
+Sentences 2.Sentence.Channels 3=PRN3
+Sentences 2.Sentence.Channels 4=PRN4
+Sentences 2.Sentence.Channels 5=PRN5
+Sentences 2.Sentence.Channels 6=PRN6
+Sentences 2.Sentence.Channels 7=PRN7
+Sentences 2.Sentence.Channels 8=PRN8
+Sentences 2.Sentence.Channels 9=PRN9
+Sentences 2.Sentence.Channels 10=PRN10
+Sentences 2.Sentence.Channels 11=PRN11
+Sentences 2.Sentence.Channels 12=PRN12
+Sentences 2.Sentence.Channels 13=Position Dilution
+Sentences 2.Sentence.Channels 14=Horizontal Dilution
+Sentences 2.Sentence.Channels 15=Vertical Dilution
+Sentences 2.Sentence.Channels 16=
+Sentences 2.Sentence.Channels 17=
+Sentences 2.Sentence.Channels 18=
+Sentences 2.Sentence.Enabled=<19>
+Sentences 2.Sentence.Enabled 0=TRUE
+Sentences 2.Sentence.Enabled 1=TRUE
+Sentences 2.Sentence.Enabled 2=TRUE
+Sentences 2.Sentence.Enabled 3=TRUE
+Sentences 2.Sentence.Enabled 4=TRUE
+Sentences 2.Sentence.Enabled 5=TRUE
+Sentences 2.Sentence.Enabled 6=TRUE
+Sentences 2.Sentence.Enabled 7=TRUE
+Sentences 2.Sentence.Enabled 8=TRUE
+Sentences 2.Sentence.Enabled 9=TRUE
+Sentences 2.Sentence.Enabled 10=TRUE
+Sentences 2.Sentence.Enabled 11=TRUE
+Sentences 2.Sentence.Enabled 12=TRUE
+Sentences 2.Sentence.Enabled 13=TRUE
+Sentences 2.Sentence.Enabled 14=TRUE
+Sentences 2.Sentence.Enabled 15=TRUE
+Sentences 2.Sentence.Enabled 16=FALSE
+Sentences 2.Sentence.Enabled 17=FALSE
+Sentences 2.Sentence.Enabled 18=FALSE
+Sentences 2.Sentence.Ignore Missing Sentences?=TRUE
+Sentences 3.Sentence.Sentence ID=$GPGSV,3,1
+Sentences 3.Sentence.Format String=$GPGSV,3,1,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%s
+Sentences 3.Sentence.Channels=<17>
+Sentences 3.Sentence.Channels 0=Satellites in View
+Sentences 3.Sentence.Channels 1=PRN 1
+Sentences 3.Sentence.Channels 2=Sat Elev 1
+Sentences 3.Sentence.Channels 3=Sat Az 1
+Sentences 3.Sentence.Channels 4=Signal to Noise 1
+Sentences 3.Sentence.Channels 5=PRN 2
+Sentences 3.Sentence.Channels 6=Sat Elev 2
+Sentences 3.Sentence.Channels 7=Sat Az 2
+Sentences 3.Sentence.Channels 8=Signal to Noise 2
+Sentences 3.Sentence.Channels 9=PRN 3
+Sentences 3.Sentence.Channels 10=Sat Elev 3
+Sentences 3.Sentence.Channels 11=Sat Az 3
+Sentences 3.Sentence.Channels 12=Signal to Noise 3
+Sentences 3.Sentence.Channels 13=PRN 4
+Sentences 3.Sentence.Channels 14=Sat Elev 4
+Sentences 3.Sentence.Channels 15=Sat Az 4
+Sentences 3.Sentence.Channels 16=Signal to Noise 4
+Sentences 3.Sentence.Enabled=<17>
+Sentences 3.Sentence.Enabled 0=FALSE
+Sentences 3.Sentence.Enabled 1=TRUE
+Sentences 3.Sentence.Enabled 2=TRUE
+Sentences 3.Sentence.Enabled 3=TRUE
+Sentences 3.Sentence.Enabled 4=TRUE
+Sentences 3.Sentence.Enabled 5=TRUE
+Sentences 3.Sentence.Enabled 6=TRUE
+Sentences 3.Sentence.Enabled 7=TRUE
+Sentences 3.Sentence.Enabled 8=TRUE
+Sentences 3.Sentence.Enabled 9=TRUE
+Sentences 3.Sentence.Enabled 10=TRUE
+Sentences 3.Sentence.Enabled 11=TRUE
+Sentences 3.Sentence.Enabled 12=TRUE
+Sentences 3.Sentence.Enabled 13=TRUE
+Sentences 3.Sentence.Enabled 14=TRUE
+Sentences 3.Sentence.Enabled 15=TRUE
+Sentences 3.Sentence.Enabled 16=TRUE
+Sentences 3.Sentence.Ignore Missing Sentences?=TRUE
+Sentences 4.Sentence.Sentence ID=$GPGSV,3,2
+Sentences 4.Sentence.Format String=$GPGSV,3,2,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%s
+Sentences 4.Sentence.Channels=<17>
+Sentences 4.Sentence.Channels 0=Satellites in View
+Sentences 4.Sentence.Channels 1=PRN 5
+Sentences 4.Sentence.Channels 2=Sat Elev 5
+Sentences 4.Sentence.Channels 3=Sat Az 5
+Sentences 4.Sentence.Channels 4=Signal to Noise 5
+Sentences 4.Sentence.Channels 5=PRN 6
+Sentences 4.Sentence.Channels 6=Sat Elev 6
+Sentences 4.Sentence.Channels 7=Sat Az 6
+Sentences 4.Sentence.Channels 8=Signal to Noise 6
+Sentences 4.Sentence.Channels 9=PRN 7
+Sentences 4.Sentence.Channels 10=Sat Elev 7
+Sentences 4.Sentence.Channels 11=Sat Az 7
+Sentences 4.Sentence.Channels 12=Signal to Noise 7
+Sentences 4.Sentence.Channels 13=PRN 8
+Sentences 4.Sentence.Channels 14=Sat Elev 8
+Sentences 4.Sentence.Channels 15=Sat Az 8
+Sentences 4.Sentence.Channels 16=Signal to Noise 8
+Sentences 4.Sentence.Enabled=<17>
+Sentences 4.Sentence.Enabled 0=FALSE
+Sentences 4.Sentence.Enabled 1=TRUE
+Sentences 4.Sentence.Enabled 2=TRUE
+Sentences 4.Sentence.Enabled 3=TRUE
+Sentences 4.Sentence.Enabled 4=TRUE
+Sentences 4.Sentence.Enabled 5=TRUE
+Sentences 4.Sentence.Enabled 6=TRUE
+Sentences 4.Sentence.Enabled 7=TRUE
+Sentences 4.Sentence.Enabled 8=TRUE
+Sentences 4.Sentence.Enabled 9=TRUE
+Sentences 4.Sentence.Enabled 10=TRUE
+Sentences 4.Sentence.Enabled 11=TRUE
+Sentences 4.Sentence.Enabled 12=TRUE
+Sentences 4.Sentence.Enabled 13=TRUE
+Sentences 4.Sentence.Enabled 14=TRUE
+Sentences 4.Sentence.Enabled 15=TRUE
+Sentences 4.Sentence.Enabled 16=TRUE
+Sentences 4.Sentence.Ignore Missing Sentences?=TRUE
+Sentences 5.Sentence.Sentence ID=$GPGSV,3,3,
+Sentences 5.Sentence.Format String=$GPGSV,3,3,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%s
+Sentences 5.Sentence.Channels=<17>
+Sentences 5.Sentence.Channels 0=Total Number of Satellites
+Sentences 5.Sentence.Channels 1=PRN 9
+Sentences 5.Sentence.Channels 2=Sat Elev 9
+Sentences 5.Sentence.Channels 3=Sat Az 9
+Sentences 5.Sentence.Channels 4=Signal to Noise 9
+Sentences 5.Sentence.Channels 5=PRN 10
+Sentences 5.Sentence.Channels 6=Sat Elev 10
+Sentences 5.Sentence.Channels 7=Sat Az 10
+Sentences 5.Sentence.Channels 8=Signal to Noise 10
+Sentences 5.Sentence.Channels 9=PRN 11
+Sentences 5.Sentence.Channels 10=Sat Elev 11
+Sentences 5.Sentence.Channels 11=Sat Az 11
+Sentences 5.Sentence.Channels 12=Signal to Noise 11
+Sentences 5.Sentence.Channels 13=PRN 12
+Sentences 5.Sentence.Channels 14=Sat Elev 12
+Sentences 5.Sentence.Channels 15=Sat Az 12
+Sentences 5.Sentence.Channels 16=Signal to Noise 12
+Sentences 5.Sentence.Enabled=<17>
+Sentences 5.Sentence.Enabled 0=FALSE
+Sentences 5.Sentence.Enabled 1=TRUE
+Sentences 5.Sentence.Enabled 2=TRUE
+Sentences 5.Sentence.Enabled 3=TRUE
+Sentences 5.Sentence.Enabled 4=TRUE
+Sentences 5.Sentence.Enabled 5=TRUE
+Sentences 5.Sentence.Enabled 6=TRUE
+Sentences 5.Sentence.Enabled 7=TRUE
+Sentences 5.Sentence.Enabled 8=TRUE
+Sentences 5.Sentence.Enabled 9=TRUE
+Sentences 5.Sentence.Enabled 10=TRUE
+Sentences 5.Sentence.Enabled 11=TRUE
+Sentences 5.Sentence.Enabled 12=TRUE
+Sentences 5.Sentence.Enabled 13=TRUE
+Sentences 5.Sentence.Enabled 14=TRUE
+Sentences 5.Sentence.Enabled 15=TRUE
+Sentences 5.Sentence.Enabled 16=TRUE
+Sentences 5.Sentence.Ignore Missing Sentences?=TRUE
+Sentences 6.Sentence.Sentence ID=$GPVTG
+Sentences 6.Sentence.Format String=$GPVTG,%d
+Sentences 6.Sentence.Channels=<1>
+Sentences 6.Sentence.Channels 0=GPVTG present?
+Sentences 6.Sentence.Enabled=<1>
+Sentences 6.Sentence.Enabled 0=TRUE
+Sentences 6.Sentence.Ignore Missing Sentences?=TRUE
+
+[Query]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Value=1000
+
+[Polynomial]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Polynomials=<1>
+Polynomials 0.Cluster.Instance=1/100th
+Polynomials 0.Cluster.Polynomial=<2>0,0.01
+
+[Scaling]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Value=<3>
+Value 0.Scaling.Channel=1
+Value 0.Scaling.Scaling=Lookup Table
+Value 0.Scaling.Instance=hello
+Value 1.Scaling.Channel=Long
+Value 1.Scaling.Scaling=Polynomial
+Value 1.Scaling.Instance=1/100th
+Value 2.Scaling.Channel=Lat
+Value 2.Scaling.Scaling=Polynomial
+Value 2.Scaling.Instance=1/100th
+
+[Lookup Table]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Tables=<2>
+Tables 0.Cluster.Instance=table
+Tables 0.Cluster.Table=<4>
+Tables 0.Cluster.Table 0.Cluster.Raw Value=15
+Tables 0.Cluster.Table 0.Cluster.Scaled Value=10
+Tables 0.Cluster.Table 1.Cluster.Raw Value=30
+Tables 0.Cluster.Table 1.Cluster.Scaled Value=11
+Tables 0.Cluster.Table 2.Cluster.Raw Value=40
+Tables 0.Cluster.Table 2.Cluster.Scaled Value=20
+Tables 0.Cluster.Table 3.Cluster.Raw Value=70
+Tables 0.Cluster.Table 3.Cluster.Scaled Value=25
+Tables 1.Cluster.Instance=hello
+Tables 1.Cluster.Table=<4>
+Tables 1.Cluster.Table 0.Cluster.Raw Value=17
+Tables 1.Cluster.Table 0.Cluster.Scaled Value=0
+Tables 1.Cluster.Table 1.Cluster.Raw Value=2000
+Tables 1.Cluster.Table 1.Cluster.Scaled Value=40
+Tables 1.Cluster.Table 2.Cluster.Raw Value=5000
+Tables 1.Cluster.Table 2.Cluster.Scaled Value=70
+Tables 1.Cluster.Table 3.Cluster.Raw Value=300000
+Tables 1.Cluster.Table 3.Cluster.Scaled Value=700
+
+[Modbus]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Port=0
+Modbus Server Name=localhost
+Serial/Ethernet=FALSE
+Baud Rate=0
+Serial Type=RTU
+Unit ID=0
+Parity=0
+Input Channels=<0>
+Swap Words?=FALSE
+
+[Initializer Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=String Init
+
+[String Init]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+String=$PGRMO,GPVTG,1*24carriage*~|.returnline*~|.feed
+
+[No Init]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+null=0
+
+[Output Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=No Output
+
+[NI Analog Out]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Device=cDAQ1Mod4
+SE/Diff=FALSE
+Channels=<3>
+Channels 0.Channel.Channel=0
+Channels 0.Channel.Range=-10.0 to 10.0 V
+Channels 1.Channel.Channel=1
+Channels 1.Channel.Range=-10.0 to 10.0 V
+Channels 2.Channel.Channel=2
+Channels 2.Channel.Range=-10.0 to 10.0 V
+AD Write Time-out (s)=0
+Channel Names=<3>
+Channel Names 0=ao1
+Channel Names 1=ao2
+Channel Names 2=ao3
+Enabled=<3>
+Enabled 0=TRUE
+Enabled 1=TRUE
+Enabled 2=TRUE
+
+[No Output]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+null=0
+
+[NI Analog]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Device=
+SE/Diff=FALSE
+Channels=<0>
+AD Read Time-out (s)=0
+
+[Serial Out]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+String=
+Channel Names=<0>
+Enabled=<0>
+
+[Multiple Queries]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Queries=<0>
+Time Between Queries (ms)=0
+Response Separator=
+   	#######
+                 ë?Xe      Ö$PGRMO,GPVTG,1*24
+$GPRMC,173805,A,4008.1909,N,10506.9201,W,000.0,187.4,190301,008.7,E*66
+$GPGGA,173805,4008.1909,N,10506.9201,W,2,09,1.0,1531.5,M,-17.8,M,,*46
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,28,10,68,332,30,15,12,051,19,18,39,138,38*78
+$GPGSV,3,2,11,20,59,065,28,21,13,315,17,23,60,054,23,27,35,267,28*72
+$GPGSV,3,3,11,32,46,221,33,04,48,139,00,13,32,212,00*4A
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+$GPRMC,173806,A,4008.1909,N,10506.9201,W,000.0,187.4,190301,008.7,E*65
+$GPGGA,173806,4008.1909,N,10506.9201,W,2,09,1.0,1531.5,M,-17.8,M,,*45
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,27,10,68,332,30,15,12,051,19,18,39,138,38*77
+$GPGSV,3,2,11,20,59,065,28,21,13,315,17,23,60,054,22,27,35,267,28*73
+$GPGSV,3,3,11,32,46,221,33,04,48,139,00,13,32,212,00*4A
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@ îk@     π$GPRMC,173807,A,4008.1909,N,10506.9201,W,000.0,187.4,190301,008.7,E*64
+$GPGGA,173807,4008.1909,N,10506.9201,W,2,09,1.0,1531.5,M,-17.8,M,,*44
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,27,10,68,332,30,15,12,051,19,18,39,138,38*77
+$GPGSV,3,2,11,20,59,065,28,21,13,315,17,23,60,054,21,27,35,267,28*70
+$GPGSV,3,3,11,32,46,221,32,04,48,139,00,13,32,212,00*4B
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@	 5Ä     π$GPRMC,173808,A,4008.1909,N,10506.9201,W,000.0,187.4,190301,008.7,E*6B
+$GPGGA,173808,4008.1909,N,10506.9201,W,2,09,1.0,1531.5,M,-17.8,M,,*4B
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,27,10,68,332,30,15,12,051,19,18,39,138,38*77
+$GPGSV,3,2,11,20,59,065,28,21,13,315,17,23,60,054,20,27,35,267,28*71
+$GPGSV,3,3,11,32,46,221,32,04,48,139,00,13,32,212,00*4B
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@µ»      π$GPRMC,173809,A,4008.1909,N,10506.9201,W,000.0,187.4,190301,008.7,E*6A
+$GPGGA,173809,4008.1909,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*4B
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,27,10,68,332,30,15,12,051,19,18,39,138,38*77
+$GPGSV,3,2,11,20,59,065,28,21,13,315,17,23,60,054,19,27,35,267,28*7B
+$GPGSV,3,3,11,32,46,221,32,04,48,139,00,13,32,212,00*4B
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@Èi‡     π$GPRMC,173810,A,4008.1909,N,10506.9201,W,000.0,187.4,190301,008.7,E*62
+$GPGGA,173810,4008.1909,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*43
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,27,10,68,332,30,15,12,051,20,18,39,138,38*7D
+$GPGSV,3,2,11,20,59,065,28,21,13,315,17,23,60,054,18,27,35,267,28*7A
+$GPGSV,3,3,11,32,46,221,32,04,48,139,00,13,32,212,00*4B
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@      π$GPRMC,173811,A,4008.1909,N,10506.9201,W,000.0,187.4,190301,008.7,E*63
+$GPGGA,173811,4008.1909,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*42
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,27,10,68,332,30,15,12,051,20,18,39,138,38*7D
+$GPGSV,3,2,11,20,59,065,28,21,13,315,17,23,60,054,18,27,35,267,28*7A
+$GPGSV,3,3,11,32,46,221,32,04,48,139,00,13,32,212,00*4B
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@QØ      π$GPRMC,173812,A,4008.1909,N,10506.9201,W,000.0,187.4,190301,008.7,E*60
+$GPGGA,173812,4008.1909,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*41
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,27,10,68,332,30,15,12,051,21,18,39,138,38*7C
+$GPGSV,3,2,11,20,59,065,28,21,13,315,17,23,60,054,18,27,35,267,29*7B
+$GPGSV,3,3,11,32,46,221,32,04,48,139,00,13,32,212,00*4B
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@ √`     π$GPRMC,173813,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*60
+$GPGGA,173813,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*41
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,27,10,68,332,31,15,12,051,21,18,39,138,38*7D
+$GPGSV,3,2,11,20,59,065,27,21,13,315,17,23,60,054,18,27,35,267,29*74
+$GPGSV,3,3,11,32,46,221,31,04,48,139,00,13,32,212,00*48
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@"›◊–     π$GPRMC,173814,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*67
+$GPGGA,173814,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*46
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,27,10,68,332,31,15,12,051,22,18,39,138,38*7E
+$GPGSV,3,2,11,20,59,065,27,21,13,315,17,23,60,054,18,27,35,267,29*74
+$GPGSV,3,3,11,32,46,221,30,04,48,139,00,13,32,212,00*49
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@$¯6P     π$GPRMC,173815,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*66
+$GPGGA,173815,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*47
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,27,10,68,332,31,15,12,051,22,18,39,138,38*7E
+$GPGSV,3,2,11,20,59,065,27,21,13,315,17,23,60,054,18,27,35,267,29*74
+$GPGSV,3,3,11,32,46,221,30,04,48,139,00,13,32,212,00*49
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@'˜¿     π$GPRMC,173816,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*65
+$GPGGA,173816,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*44
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,27,10,68,332,31,15,12,051,22,18,39,138,38*7E
+$GPGSV,3,2,11,20,59,065,26,21,13,315,17,23,60,054,18,27,35,267,29*75
+$GPGSV,3,3,11,32,46,221,30,04,48,139,00,13,32,212,00*49
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@)-N∞     π$GPRMC,173817,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*64
+$GPGGA,173817,4008.1908,N,10506.9201,W,2,09,1.0,1531.3,M,-17.8,M,,*42
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,27,10,68,332,31,15,12,051,22,18,39,138,38*7E
+$GPGSV,3,2,11,20,59,065,26,21,13,315,17,23,60,054,18,27,35,267,29*75
+$GPGSV,3,3,11,32,46,221,29,04,48,139,00,13,32,212,00*41
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@+H      π$GPRMC,173818,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*6B
+$GPGGA,173818,4008.1908,N,10506.9201,W,2,09,1.0,1531.3,M,-17.8,M,,*4D
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,27,10,68,332,31,15,12,051,22,18,39,138,38*7E
+$GPGSV,3,2,11,20,59,065,26,21,13,315,17,23,60,054,18,27,35,267,29*75
+$GPGSV,3,3,11,32,46,221,28,04,48,139,00,13,32,212,00*40
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@-be     π$GPRMC,173819,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*6A
+$GPGGA,173819,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*4B
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,27,10,68,333,31,15,12,051,22,18,39,138,38*7F
+$GPGSV,3,2,11,20,59,065,26,21,13,315,17,23,60,054,18,27,35,267,29*75
+$GPGSV,3,3,11,32,46,221,27,04,48,139,00,13,32,212,00*4F
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@/~ß¿     π$GPRMC,173820,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*60
+$GPGGA,173820,4008.1908,N,10506.9201,W,2,09,1.0,1531.3,M,-17.8,M,,*46
+$GPGSA,A,3,08,10,15,18,20,21,23,27,32,,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,26,10,68,333,31,15,12,051,22,18,39,138,38*7E
+$GPGSV,3,2,11,20,59,065,25,21,13,315,17,23,60,054,18,27,35,267,29*76
+$GPGSV,3,3,11,32,46,221,27,04,48,139,00,13,32,212,00*4F
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@0ÃW®     π$GPRMC,173821,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*61
+$GPGGA,173821,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*40
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,26,10,68,333,31,15,12,051,22,18,39,138,38*7E
+$GPGSV,3,2,11,20,59,065,24,21,13,315,17,23,60,054,18,24,33,075,19*70
+$GPGSV,3,3,11,27,35,267,29,32,46,221,27,04,48,139,00*46
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ç@1Ÿˇ†     Å$GPRMC,173822,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*62
+$GPGGA,173822,4008.1908,N,10506.9201,W,2,09,1.0,1531.3,M,-17.8,M,,*44
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,26,10,68,333,31,15,12,051,21,18,39,138,38*7D
+$GPGSV,3,2,11,20,59,065,24,21,13,315,17,23,60,054,17,24,33,075,17*71
+$GPGSV,3,3,11,27,35,267,29,32,46,221,27,04,48,139,00*46
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+$GPRMC,173823,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*63
+$GPGGA,173823,4008.1908,N,10506.9201,W,2,09,1.0,1531.3,M,-17.8,M,,*45
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+  É@2ÁM¯     w$GPGSV,3,1,11,08,22,305,26,10,68,333,31,15,12,051,21,18,39,138,38*7D
+$GPGSV,3,2,11,20,59,065,24,21,13,315,17,23,60,054,16,24,33,075,18*7F
+$GPGSV,3,3,11,27,35,267,29,32,46,221,26,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+$GPRMC,173824,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*64
+$GPGGA,173824,4008.1908,N,10506.9201,W,2,09,1.0,1531.3,M,-17.8,M,,*42
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,26,10,68,333,31,15,12,051,22,18,39,138,38*7E
+$GPGSV,3,2,11,20,59,065,23,21,13,315,17,23,60,054,16,24,33,075,17*77
+$GPGSV,3,3,11,27,35,267,29,32,46,221,26,04,48,139,  ¯@3Ùî¯     Ï00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+$GPRMC,173825,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*65
+$GPGGA,173825,4008.1908,N,10506.9201,W,2,09,1.0,1531.3,M,-17.8,M,,*43
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,26,10,68,333,31,15,12,051,22,18,39,138,38*7E
+$GPGSV,3,2,11,20,59,065,22,21,13,315,17,23,60,054,15,24,33,075,17*75
+$GPGSV,3,3,11,27,35,267,29,32,46,221,26,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@5t‡     π$GPRMC,173826,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*66
+$GPGGA,173826,4008.1908,N,10506.9201,W,2,09,1.0,1531.3,M,-17.8,M,,*40
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,26,10,68,333,31,15,12,051,22,18,39,138,38*7E
+$GPGSV,3,2,11,20,59,065,21,21,13,315,17,23,60,054,15,24,33,075,16*77
+$GPGSV,3,3,11,27,35,267,29,32,46,221,26,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@6†     π$GPRMC,173827,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*67
+$GPGGA,173827,4008.1908,N,10506.9201,W,2,09,1.0,1531.3,M,-17.8,M,,*41
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,26,10,68,333,31,15,12,051,22,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,20,21,13,315,17,23,60,054,15,24,33,075,16*76
+$GPGSV,3,3,11,27,35,267,29,32,46,221,25,04,48,139,00*44
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@7S      π$GPRMC,173828,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*68
+$GPGGA,173828,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*49
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,26,10,68,333,31,15,12,051,22,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,20,21,13,315,17,23,60,054,15,24,33,075,16*76
+$GPGSV,3,3,11,27,35,267,29,32,46,221,25,04,48,139,00*44
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@8)Tò     π$GPRMC,173829,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*69
+$GPGGA,173829,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*48
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,26,10,68,333,31,15,12,051,22,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,20,21,13,315,17,23,60,054,15,24,33,075,16*76
+$GPGSV,3,3,11,27,35,267,29,32,46,221,24,04,48,139,00*45
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@96wÿ     π$GPRMC,173830,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*61
+$GPGGA,173830,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*40
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,26,10,68,333,31,15,12,051,22,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,20,21,14,315,17,23,60,054,15,24,33,075,16*71
+$GPGSV,3,3,11,27,35,267,29,32,46,221,24,04,48,139,00*45
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@:Do®     π$GPRMC,173831,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*60
+$GPGGA,173831,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*41
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,26,10,68,333,31,15,12,051,22,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,20,21,14,315,17,23,60,054,15,24,33,075,16*71
+$GPGSV,3,3,11,27,35,267,29,32,46,221,23,04,48,139,00*42
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@;Q·`     π$GPRMC,173832,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*63
+$GPGGA,173832,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*42
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,25,10,68,333,31,15,12,051,22,18,39,138,37*72
+$GPGSV,3,2,11,20,59,065,20,21,14,315,17,23,59,054,15,24,33,075,16*7B
+$GPGSV,3,3,11,27,35,267,29,32,46,221,22,04,48,139,00*43
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@<_ò®     π$GPRMC,173833,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*62
+$GPGGA,173833,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*43
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,25,10,68,333,31,15,12,051,22,18,39,138,37*72
+$GPGSV,3,2,11,20,59,065,20,21,14,315,17,23,59,054,15,24,33,074,16*7A
+$GPGSV,3,3,11,27,35,267,29,32,46,221,22,04,48,139,00*43
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@=l¬–     π$GPRMC,173834,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*65
+$GPGGA,173834,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*44
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,25,10,68,333,31,15,12,051,21,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,20,21,14,315,17,23,59,054,15,24,33,074,16*7A
+$GPGSV,3,3,11,27,35,267,29,32,46,221,21,04,48,139,00*40
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@>zh     π$GPRMC,173835,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*64
+$GPGGA,173835,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*45
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,25,10,68,333,31,15,12,051,21,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,21,21,14,315,17,23,59,054,15,24,33,074,15*78
+$GPGSV,3,3,11,27,35,267,29,32,46,221,21,04,48,139,00*40
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@?á◊Ë     π$GPRMC,173836,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*67
+$GPGGA,173836,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*46
+$GPGSA,A,3,08,10,15,18,20,21,23,,27,32,,,1.8,1.0,1.5*3E
+$GPGSV,3,1,11,08,22,305,25,10,68,333,31,15,12,051,22,18,39,138,37*72
+$GPGSV,3,2,11,20,59,065,21,21,14,315,17,23,59,054,16,24,33,074,15*7B
+$GPGSV,3,3,11,27,35,266,29,32,46,221,21,04,48,139,00*41
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@@Jö»     π$GPRMC,173837,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*66
+$GPGGA,173837,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*47
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,25,10,68,333,31,15,12,051,21,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,21,21,14,315,17,23,59,054,16,24,33,074,16*78
+$GPGSV,3,3,11,27,35,266,29,32,46,221,21,04,48,139,00*41
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@@—o     π$GPRMC,173838,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*69
+$GPGGA,173838,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*48
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,25,10,68,333,31,15,12,051,21,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,21,21,14,315,17,23,59,054,15,24,33,074,16*7B
+$GPGSV,3,3,11,27,35,266,29,32,46,221,21,04,48,139,00*41
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@AX P     π$GPRMC,173839,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*68
+$GPGGA,173839,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*49
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,25,10,68,333,31,15,12,051,21,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,21,21,14,315,17,23,59,054,15,24,33,074,16*7B
+$GPGSV,3,3,11,27,35,266,29,32,46,221,21,04,48,139,00*41
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@Aﬁ¬‹     π$GPRMC,173840,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*66
+$GPGGA,173840,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*47
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,25,10,68,333,31,15,12,051,21,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,21,21,14,315,17,23,59,054,15,24,33,074,16*7B
+$GPGSV,3,3,11,27,35,266,30,32,46,221,20,04,48,139,00*48
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@Beã     π$GPRMC,173841,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*67
+$GPGGA,173841,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*46
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,25,10,68,333,31,15,12,051,21,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,22,21,14,315,17,23,59,054,15,24,33,074,16*78
+$GPGSV,3,3,11,27,35,266,30,32,46,221,20,04,48,139,00*48
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@BÏ=ê     π$GPRMC,173842,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*64
+$GPGGA,173842,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*45
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,25,10,68,333,31,15,12,051,21,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,22,21,14,315,17,23,59,054,15,24,33,074,17*79
+$GPGSV,3,3,11,27,35,266,30,32,46,221,19,04,48,139,00*42
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ~@Cs&8     r$GPRMC,173843,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*65
+$GPGGA,173843,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*44
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,25,10,68,333,31,15,12,051,21,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,22,21,14,315,17,23,59,054,15,24,33,074,17*79
+$GPGSV,3,3,11,27,35,266,30,32,46,221,19,04,48,139,00*42
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+$GPRMC,173844,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*62
+$GPGGA,173844,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*43
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,24,10,68,333,31,15,12,051,21,18,39,138,37*70
+$GPGSV,3,2,11,20,59,065,23,21,14,315,17,23,59,054,15,24,33,074,18*77
+$GPGSV,3,3,11,27,35,266,30,32,46,221,18,04,48,139,00*43
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@C˘ñÿ     π$GPRMC,173845,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*63
+$GPGGA,173845,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*42
+$GPGSA,A,3,08,10,15,18,20,21,24,27,32,,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,24,10,68,333,31,15,12,051,21,18,39,138,37*70
+$GPGSV,3,2,11,20,59,065,23,21,14,315,17,24,33,074,18,27,35,266,30*7D
+$GPGSV,3,3,11,32,46,221,18,04,48,139,00,13,33,213,00*43
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@DÄwÄ     π$GPRMC,173846,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*60
+$GPGGA,173846,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*41
+$GPGSA,A,3,08,10,15,18,20,21,24,27,32,,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,23,10,68,333,31,15,12,051,21,18,39,138,37*77
+$GPGSV,3,2,11,20,59,065,23,21,14,315,17,24,33,074,18,27,35,266,30*7D
+$GPGSV,3,3,11,32,46,221,18,04,48,139,00,13,33,213,00*43
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@E     π$GPRMC,173847,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*61
+$GPGGA,173847,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*40
+$GPGSA,A,3,08,10,15,18,20,21,24,27,32,,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,22,10,68,333,31,15,12,051,21,18,39,138,37*76
+$GPGSV,3,2,11,20,59,065,23,21,14,315,17,24,33,074,19,27,35,266,30*7C
+$GPGSV,3,3,11,32,46,221,18,04,48,139,00,13,33,213,00*43
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@Eç¢     π$GPRMC,173848,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*6E
+$GPGGA,173848,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*4F
+$GPGSA,A,3,08,10,15,18,20,21,24,27,32,,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,22,305,22,10,68,333,31,15,12,051,21,18,39,138,37*76
+$GPGSV,3,2,11,20,59,065,24,21,14,315,17,24,33,074,20,27,35,266,30*71
+$GPGSV,3,3,11,32,46,221,18,04,48,139,00,13,33,213,00*43
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@F$t     π$GPRMC,173849,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*6F
+$GPGGA,173849,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*4E
+$GPGSA,A,3,08,10,15,18,20,21,24,27,32,,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,23,304,22,10,68,333,31,15,12,051,21,18,39,138,37*76
+$GPGSV,3,2,11,20,59,065,25,21,14,315,17,24,33,074,20,27,35,266,30*70
+$GPGSV,3,3,11,32,46,221,18,04,48,139,00,13,33,213,00*43
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@Föô     π$GPRMC,173850,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*67
+$GPGGA,173850,4008.1908,N,10506.9201,W,2,09,1.0,1531.4,M,-17.8,M,,*46
+$GPGSA,A,3,08,10,15,18,20,21,24,27,32,,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,23,304,22,10,68,333,31,15,12,051,20,18,39,138,37*77
+$GPGSV,3,2,11,20,59,065,25,21,14,315,17,24,33,074,20,27,35,266,30*70
+$GPGSV,3,3,11,32,46,221,18,04,48,139,00,13,33,213,00*43
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@G!fL     π$GPRMC,173851,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*66
+$GPGGA,173851,4008.1908,N,10506.9201,W,2,09,1.0,1531.5,M,-17.8,M,,*46
+$GPGSA,A,3,08,10,15,18,20,21,24,27,32,,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,23,304,22,10,68,334,31,15,12,051,21,18,39,138,37*71
+$GPGSV,3,2,11,20,59,065,25,21,14,315,17,24,33,074,20,27,35,266,30*70
+$GPGSV,3,3,11,32,46,221,18,04,48,139,00,13,33,213,00*43
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@G®	¿     π$GPRMC,173852,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*65
+$GPGGA,173852,4008.1908,N,10506.9201,W,2,09,1.0,1531.5,M,-17.8,M,,*45
+$GPGSA,A,3,08,10,15,18,20,21,24,27,32,,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,23,304,22,10,68,334,31,15,12,051,20,18,39,138,37*70
+$GPGSV,3,2,11,20,59,065,25,21,14,315,18,24,33,074,20,27,35,266,29*77
+$GPGSV,3,3,11,32,46,221,18,04,48,139,00,13,33,213,00*43
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@H.£X     π$GPRMC,173853,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*64
+$GPGGA,173853,4008.1908,N,10506.9201,W,2,09,1.0,1531.5,M,-17.8,M,,*44
+$GPGSA,A,3,08,10,15,18,20,21,24,27,32,,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,23,304,22,10,68,334,31,15,12,051,20,18,39,138,37*70
+$GPGSV,3,2,11,20,59,065,25,21,14,315,18,24,33,074,20,27,35,266,29*77
+$GPGSV,3,3,11,32,46,221,18,04,48,139,00,13,33,213,00*43
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@Hµ&x     π$GPRMC,173854,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*63
+$GPGGA,173854,4008.1908,N,10506.9201,W,2,09,1.0,1531.5,M,-17.8,M,,*43
+$GPGSA,A,3,08,10,15,18,20,21,24,27,32,,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,23,304,22,10,68,334,31,15,12,051,20,18,39,138,37*70
+$GPGSV,3,2,11,20,59,065,26,21,14,315,18,24,33,074,20,27,35,266,29*74
+$GPGSV,3,3,11,32,46,221,18,04,48,139,00,13,33,213,00*43
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@I;£l     π$GPRMC,173855,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*62
+$GPGGA,173855,4008.1908,N,10506.9201,W,2,09,1.0,1531.5,M,-17.8,M,,*42
+$GPGSA,A,3,08,10,15,18,20,21,24,27,32,,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,23,304,22,10,68,334,31,15,12,051,20,18,39,138,37*70
+$GPGSV,3,2,11,20,59,065,26,21,14,315,18,24,33,074,20,27,35,266,29*74
+$GPGSV,3,3,11,32,46,221,17,04,48,139,00,13,33,213,00*4C
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@I¬7Ë     π$GPRMC,173856,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*61
+$GPGGA,173856,4008.1908,N,10506.9201,W,2,09,1.0,1531.5,M,-17.8,M,,*41
+$GPGSA,A,3,08,10,15,18,20,21,24,27,32,,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,23,304,22,10,68,334,31,15,12,051,20,18,39,138,37*70
+$GPGSV,3,2,11,20,59,065,26,21,14,315,18,24,33,074,20,27,35,266,29*74
+$GPGSV,3,3,11,32,46,221,16,04,48,139,00,13,33,213,00*4D
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@JHµ§     π$GPRMC,173857,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*60
+$GPGGA,173857,4008.1908,N,10506.9201,W,2,09,1.1,1531.5,M,-17.8,M,,*41
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.9,1.1,1.5*39
+$GPGSV,3,1,11,08,23,304,22,10,68,334,31,15,12,051,20,18,39,138,37*70
+$GPGSV,3,2,11,20,59,065,26,21,14,315,18,23,59,054,19,24,33,074,20*7A
+$GPGSV,3,3,11,27,35,266,29,32,46,221,16,04,48,139,00*45
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@Jœ]     π$GPRMC,173858,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*6F
+$GPGGA,173858,4008.1908,N,10506.9201,W,2,09,1.1,1531.5,M,-17.8,M,,*4E
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.9,1.1,1.5*39
+$GPGSV,3,1,11,08,23,304,22,10,68,334,31,15,12,051,20,18,39,138,37*70
+$GPGSV,3,2,11,20,59,065,26,21,14,315,18,23,59,054,18,24,33,074,20*7B
+$GPGSV,3,3,11,27,35,266,28,32,46,221,16,04,48,139,00*44
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@KV     π$GPRMC,173859,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*6E
+$GPGGA,173859,4008.1908,N,10506.9201,W,2,09,1.1,1531.5,M,-17.8,M,,*4F
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.9,1.1,1.5*39
+$GPGSV,3,1,11,08,23,304,22,10,68,334,31,15,12,051,20,18,38,138,37*71
+$GPGSV,3,2,11,20,59,065,26,21,14,315,18,23,59,054,17,24,33,074,20*74
+$GPGSV,3,3,11,27,35,266,28,32,46,221,16,04,48,139,00*44
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ˜@K‹ƒ     Î$GPRMC,173900,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*63
+$GPGGA,173900,4008.1908,N,10506.9201,W,2,09,1.1,1531.5,M,-17.8,M,,*42
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.9,1.1,1.5*39
+$GPGSV,3,1,11,08,23,304,22,10,68,334,31,15,12,051,20,18,38,138,37*71
+$GPGSV,3,2,11,20,59,065,26,21,14,315,18,23,59,054,17,24,33,074,20*74
+$GPGSV,3,3,11,27,35,266,28,32,46,221,16,04,48,139,00*44
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+$PGRMT,GPS 18x-LVC software ver. 3.90,,,,,,,,*65
+  ≈@LcBP     π$GPRMC,173901,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*62
+$GPGGA,173901,4008.1908,N,10506.9201,W,2,09,1.1,1531.5,M,-17.8,M,,*43
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.9,1.1,1.5*39
+$GPGSV,3,1,11,08,23,304,22,10,68,334,32,15,12,051,19,18,38,138,37*78
+$GPGSV,3,2,11,20,59,065,26,21,14,315,18,23,59,054,17,24,33,074,19*7E
+$GPGSV,3,3,11,27,35,266,28,32,46,221,15,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  @LÈı0     $GPRMC,173902,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*61
+$GPGGA,173902,4008.1908,N,10506.9201,W,2,09,1.1,1531.5,M,-17.8,M,,*40
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.9,1.1,1.5*39
+$GPGSV,3,1,11,08,23,304,22,10,68,334,32,15,12,051,19,18,38,138,38*77
+$GPGSV,3,2,11,20,59,065,26,21,14,315,18,23,59,054,17,24,33,074,19*7E
+$GPGSV,3,3,11,27,35,266,28,32,46,221,15,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+$GPRMC,173903,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*60
+$GPGGA,173903,400  ^@Mp∫Ù     R8.1908,N,10506.9201,W,2,09,1.1,1531.5,M,-17.8,M,,*41
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.9,1.1,1.5*39
+$GPGSV,3,1,11,08,23,304,22,10,68,334,32,15,12,051,19,18,38,138,38*77
+$GPGSV,3,2,11,20,59,065,26,21,14,315,18,23,59,054,17,24,33,074,18*7F
+$GPGSV,3,3,11,27,35,266,28,32,46,221,15,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+$GPRMC,173904,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*67
+$GPGGA,173904,4008.1908,N,10506.9201,W,2,09,1.1,1531.5,M,-17.8,M,,*46
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.9,1.1,1.5*39
+$GPGSV,3,1,11,08,23,304,22,10,68,334,32,15  å@M˜8ÿ     Ä,12,051,19,18,38,138,38*77
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,17,24,33,074,18*7E
+$GPGSV,3,3,11,27,35,266,28,32,46,221,15,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+$GPRMC,173905,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*66
+$GPGGA,173905,4008.1908,N,10506.9201,W,2,09,1.1,1531.5,M,-17.8,M,,*47
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,22,10,68,334,32,15,12,051,19,18,38,138,38*77
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,16,24,33,074,18*7F
+$GPGSV,3,3,11,27,35,266,28,32,46,221,15,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@N}√º     π$GPRMC,173906,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*65
+$GPGGA,173906,4008.1908,N,10506.9201,W,2,09,1.0,1531.5,M,-17.8,M,,*45
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,23,304,22,10,68,334,32,15,12,051,19,18,38,138,38*77
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,16,24,33,074,18*7F
+$GPGSV,3,3,11,27,35,266,28,32,46,221,15,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@OXD     π$GPRMC,173907,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*64
+$GPGGA,173907,4008.1908,N,10506.9201,W,2,09,1.1,1531.6,M,-17.8,M,,*46
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,21,10,68,334,32,15,12,051,19,18,38,138,38*74
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,16,24,33,074,18*7F
+$GPGSV,3,3,11,27,35,266,28,32,46,221,15,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@OäﬁP     π$GPRMC,173908,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*6B
+$GPGGA,173908,4008.1908,N,10506.9201,W,2,09,1.0,1531.5,M,-17.8,M,,*4B
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,23,304,22,10,68,334,33,15,12,051,19,18,38,138,38*76
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,16,24,33,074,18*7F
+$GPGSV,3,3,11,27,35,266,28,32,46,221,15,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@P√™     π$GPRMC,173909,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*6A
+$GPGGA,173909,4008.1908,N,10506.9201,W,2,09,1.0,1531.5,M,-17.8,M,,*4A
+$GPGSA,A,3,08,10,15,18,20,21,,24,27,32,,,1.9,1.0,1.6*3B
+$GPGSV,3,1,11,08,23,304,22,10,68,334,33,15,12,051,19,18,38,138,38*76
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,16,24,33,074,18*7F
+$GPGSV,3,3,11,27,35,266,28,32,46,221,15,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@PL»     π$GPRMC,173910,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*62
+$GPGGA,173910,4008.1908,N,10506.9201,W,2,09,1.1,1531.5,M,-17.8,M,,*43
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,22,10,68,334,33,15,12,051,18,18,38,138,38*77
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,16,24,33,074,17*70
+$GPGSV,3,3,11,27,35,266,28,32,46,221,15,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@Pè[ÿ     π$GPRMC,173911,A,4008.1908,N,10506.9201,W,000.0,187.4,190301,008.7,E*63
+$GPGGA,173911,4008.1908,N,10506.9201,W,2,09,1.1,1531.5,M,-17.8,M,,*42
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,22,10,68,334,33,15,12,051,18,18,38,138,38*77
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,17,24,33,074,17*71
+$GPGSV,3,3,11,27,35,266,28,32,46,221,16,04,48,139,00*44
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@P“…6     π$GPRMC,173912,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*61
+$GPGGA,173912,4008.1908,N,10506.9200,W,2,09,1.1,1531.5,M,-17.8,M,,*40
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,22,10,68,334,33,15,12,051,18,18,38,138,38*77
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,18,24,33,074,17*7E
+$GPGSV,3,3,11,27,35,266,28,32,46,221,16,04,48,139,00*44
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@Q¸0     π$GPRMC,173913,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*60
+$GPGGA,173913,4008.1908,N,10506.9200,W,2,09,1.1,1531.5,M,-17.8,M,,*41
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,22,10,68,334,33,15,12,051,18,18,38,138,38*77
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,19,24,33,074,17*7F
+$GPGSV,3,3,11,27,35,266,28,32,47,222,17,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@QY;&     π$GPRMC,173914,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*67
+$GPGGA,173914,4008.1908,N,10506.9200,W,2,09,1.1,1531.5,M,-17.8,M,,*46
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,22,10,68,334,33,15,12,051,18,18,38,138,38*77
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,19,24,33,074,17*7F
+$GPGSV,3,3,11,27,35,266,28,32,47,222,17,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@Qúã6     π$GPRMC,173915,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*66
+$GPGGA,173915,4008.1908,N,10506.9200,W,2,09,1.1,1531.5,M,-17.8,M,,*47
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,22,10,68,334,33,15,12,051,18,18,38,138,38*77
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,19,24,33,074,17*7F
+$GPGSV,3,3,11,27,35,266,28,32,47,222,17,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@Qﬂﬁ      π$GPRMC,173916,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*65
+$GPGGA,173916,4008.1908,N,10506.9200,W,2,09,1.1,1531.5,M,-17.8,M,,*44
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,22,10,68,334,34,15,12,051,17,18,38,138,38*7F
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,19,24,33,074,17*7F
+$GPGSV,3,3,11,27,35,266,28,32,47,222,17,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@R#8Z     π$GPRMC,173917,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*64
+$GPGGA,173917,4008.1908,N,10506.9200,W,2,09,1.1,1531.5,M,-17.8,M,,*45
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,22,10,68,334,34,15,12,051,17,18,38,138,38*7F
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,20,24,33,074,17*75
+$GPGSV,3,3,11,27,35,266,28,32,47,222,17,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@Rfû≤     π$GPRMC,173918,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*6B
+$GPGGA,173918,4008.1908,N,10506.9200,W,2,09,1.1,1531.5,M,-17.8,M,,*4A
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,23,10,68,334,34,15,12,051,17,18,38,138,38*7E
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,20,24,33,074,17*75
+$GPGSV,3,3,11,27,35,266,28,32,47,222,17,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@R©€&     π$GPRMC,173919,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*6A
+$GPGGA,173919,4008.1908,N,10506.9200,W,2,09,1.1,1531.5,M,-17.8,M,,*4B
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,23,10,68,334,34,15,12,051,17,18,38,138,38*7E
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,20,24,33,074,17*75
+$GPGSV,3,3,11,27,35,266,28,32,47,222,17,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@RÌ!∏     π$GPRMC,173920,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*60
+$GPGGA,173920,4008.1908,N,10506.9200,W,2,09,1.1,1531.5,M,-17.8,M,,*41
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,23,10,68,334,34,15,12,051,17,18,38,138,38*7E
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,20,24,33,074,17*75
+$GPGSV,3,3,11,27,35,266,28,32,47,222,17,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@S0g     π$GPRMC,173921,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*61
+$GPGGA,173921,4008.1908,N,10506.9200,W,2,09,1.1,1531.5,M,-17.8,M,,*40
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,23,10,68,334,34,15,12,051,17,18,38,138,38*7E
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,20,24,33,074,17*75
+$GPGSV,3,3,11,27,35,266,28,32,47,222,17,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ≈@SsØ     π$GPRMC,173922,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*62
+$GPGGA,173922,4008.1908,N,10506.9200,W,2,09,1.1,1531.5,M,-17.8,M,,*43
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,24,10,68,334,34,15,12,051,17,18,38,138,38*79
+$GPGSV,3,2,11,20,59,065,27,21,14,315,18,23,59,054,20,24,33,074,17*75
+$GPGSV,3,3,11,27,35,266,28,32,47,222,17,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+  ç@S∂Û     Å$GPRMC,173923,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*63
+$GPGGA,173923,4008.1908,N,10506.9200,W,2,09,1.1,1531.5,M,-17.8,M,,*42
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+$GPGSV,3,1,11,08,23,304,24,10,68,334,34,15,12,051,17,18,38,138,38*79
+$GPGSV,3,2,11,20,59,065,27,21,14,315,17,23,59,054,20,24,33,074,17*7A
+$GPGSV,3,3,11,27,35,266,28,32,47,222,17,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+$GPRMC,173924,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*64
+$GPGGA,173924,4008.1908,N,10506.9200,W,2,09,1.1,1531.5,M,-17.8,M,,*45
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,,,,1.8,1.1,1.5*38
+  Q@S˙/~     E$GPGSV,3,1,11,08,23,304,24,10,68,334,34,15,12,051,17,18,38,138,38*79
+$GPGSV,3,2,11,20,59,065,27,21,14,315,17,23,59,054,20,24,33,074,17*7A
+$GPGSV,3,3,11,27,35,266,27,32,47,222,17,04,48,139,00*48
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+$GPRMC,173925,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*65
+$GPGGA,173925,4008.1908,N,10506.9200,W,2,10,1.0,1531.5,M,-17.8,M,,*4D
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,32,,,1.8,1.0,1.4*39
+$GPGSV,3,1,11,08,23,304,24,10,68,334,34,15,12,051,17,18,38,138,38*79
+$GPGSV,3,2,11,20,59,065,27,21,14,315,17,23,59,054,20,24,33,074,18*75  .@T=y‰     "
+$GPGSV,3,3,11,27,35,266,27,32,47,222,18,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
+$GPRMC,173926,A,4008.1908,N,10506.9200,W,000.0,187.4,190301,008.7,E*66
+$GPGGA,173926,4008.1908,N,10506.9200,W,2,10,1.0,1531.5,M,-17.8,M,,*4E
+$GPGSA,A,3,08,10,15,18,20,21,23,24,27,32,,,1.8,1.0,1.4*39
+$GPGSV,3,1,11,08,23,304,25,10,68,334,34,15,12,051,17,18,38,138,38*78
+$GPGSV,3,2,11,20,59,065,27,21,14,315,17,23,59,054,20,24,33,074,18*75
+$GPGSV,3,3,11,27,35,266,27,32,47,222,18,04,48,139,00*47
+$GPVTG,187.4,T,178.8,M,000.0,N,0000.0,K*72
