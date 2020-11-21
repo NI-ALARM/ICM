@@ -6,7 +6,7 @@ Author=David Thomson
 Description=
 Comments=
 Date=3688786800
-Time=51771.35762262
+Time=60278.5421834
 Location=
 # of Records=0
 
@@ -94,5 +94,13 @@ MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#
 String=
 
 [No Init]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+null=0
+
+[Output Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=No Output
+
+[No Output]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
 null=0
