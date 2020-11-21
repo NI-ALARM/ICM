@@ -80,7 +80,6 @@
 		<Item Name="Scaling.lvclass" Type="LVClass" URL="../Scaling/Scaling.lvclass"/>
 		<Item Name="Initialize.lvclass" Type="LVClass" URL="../Initialize/Initialize.lvclass"/>
 		<Item Name="Output.lvclass" Type="LVClass" URL="../Output/Output.lvclass"/>
-		<Item Name="ICM Simulator State.ctl" Type="VI" URL="../Recorder/ICM Simulator State.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="DTbl Empty Digital.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DTblOps.llb/DTbl Empty Digital.vi"/>
@@ -357,6 +356,7 @@
 			<Item Name="String Out Type Def.ctl" Type="VI" URL="../Outputs/String Out/String Out Type Def.ctl"/>
 			<Item Name="OSDS Simulated Channel.ctl" Type="VI" URL="../../../MICAS-X/Resources/OSDS/OSDS Subvis/OSDS Simulated Channel.ctl"/>
 			<Item Name="ICM Create String.vi" Type="VI" URL="../Recorder/ICM Create String.vi"/>
+			<Item Name="ICM Simulator State.ctl" Type="VI" URL="../Recorder/ICM Simulator State.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="ICM Tester" Type="EXE">
