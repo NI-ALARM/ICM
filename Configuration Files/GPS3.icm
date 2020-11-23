@@ -6,8 +6,8 @@ Version=0
 Author=Davita
 Description=GPS data 
 Comments=
-Date=3688700400
-Time=49357.08556461
+Date=3688959600
+Time=56254.82482815
 Location=
 # of Records=2435
 
@@ -21,7 +21,7 @@ null=0
 
 [Bus Name]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
-name=Serial
+name=Clock Time
 
 [Serial]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
@@ -374,3 +374,7 @@ MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#
 Queries=<0>
 Time Between Queries (ms)=0
 Response Separator=
+
+[Clock Time]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+UTC?=FALSE

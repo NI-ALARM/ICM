@@ -5,8 +5,8 @@ Version=1
 Author=David Thomson
 Description=
 Comments=
-Date=3688786800
-Time=60278.5421834
+Date=3678328800
+Time=59648.54307127
 Location=
 # of Records=0
 
@@ -84,23 +84,3 @@ Value=<0>
 
 [Query Name]
 name=No Query
-
-[Initializer Name]
-MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
-name=String Init
-
-[String Init]
-MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
-String=
-
-[No Init]
-MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
-null=0
-
-[Output Name]
-MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
-name=No Output
-
-[No Output]
-MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
-null=0
