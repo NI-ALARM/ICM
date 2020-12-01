@@ -1,0 +1,32 @@
+
+[Bus Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=NI Digital to Analog
+
+[NI Digital to Analog]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Device=cDAQ1Mod4
+SE/Diff=FALSE
+Channels=<0>
+AD Read Time-out (s)=0
+
+[ICM General Parameters]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Data Stream Name=
+Version=0
+Author=
+Description=
+Comments=
+Date=3689478000
+Time=58704.45699835
+Location=
+# of Records=0
+
+[Output Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=NI Analog Out
+
+[Num Array]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Channel Names=<0>
+Enabled=<0>
