@@ -5,28 +5,70 @@ name=NI Digital to Analog
 
 [NI Digital to Analog]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
-Device=cDAQ1Mod4
+Device=myDAQ1
 SE/Diff=FALSE
-Channels=<0>
-AD Read Time-out (s)=0
+Channels=<1>
+Channels 0.Channel.Channel=0
+Channels 0.Channel.Range=-10.0 to 10.0 V
 
 [ICM General Parameters]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
-Data Stream Name=
+Data Stream Name=DA Test
 Version=0
 Author=
 Description=
 Comments=
-Date=3689478000
-Time=58704.45699835
+Date=3689650800
+Time=51339.25829601
 Location=
 # of Records=0
 
 [Output Name]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
-name=NI Analog Out
+name=All Channels Out
 
 [Num Array]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
 Channel Names=<0>
 Enabled=<0>
+
+[Initializer Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=No Init
+
+[No Init]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+null=0
+
+[Query Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=No Query
+
+[No Query]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+null=0
+
+[Parser Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=No-op Parser
+
+[No-op Parser]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Channels=<0>
+Enabled=<0>
+
+[Scaling]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Value=<0>
+
+[All Channels]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Channel Names=<1>
+Channel Names 0=TestOut
+Enabled=<1>
+Enabled 0=TRUE
+Format Specifiers=<1>
+Format Specifiers 0=%f
+String Header=
+Use Same Format Specifier line*~|.feedFor All Channels=FALSE
+Delimeter=

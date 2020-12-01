@@ -5,8 +5,8 @@ Version=1
 Author=David Thomson
 Description=
 Comments=
-Date=3678328800
-Time=59648.54307127
+Date=3689650800
+Time=52607.59033298
 Location=
 # of Records=0
 
@@ -27,13 +27,16 @@ Clear Buffer on Open?=FALSE
 [Clock Time]
 UTC?=FALSE
 [Parser Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
 name=Time Parser
+
 [General Parser]
 Format String=sdfsdf
 Channels=<2>
 Channels 0=sdfd
 Channels 1=asdfsadf
 [Time Parser]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
 Enabled=<12>
 Enabled 0=TRUE
 Enabled 1=TRUE
@@ -48,8 +51,11 @@ Enabled 9=FALSE
 Enabled 10=FALSE
 Enabled 11=FALSE
 UTC?=TRUE
+
 [No Query]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
 null=1
+
 [Query]
 Cycle Time (ms)=1000
 [Lookup Table]
@@ -83,4 +89,21 @@ MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#
 Value=<0>
 
 [Query Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
 name=No Query
+
+[Initializer Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=No Init
+
+[No Init]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+null=0
+
+[Output Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=No Output
+
+[No Output]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+null=0

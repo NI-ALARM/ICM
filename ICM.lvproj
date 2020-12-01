@@ -33,10 +33,20 @@
 		</Item>
 		<Item Name="Buses" Type="Folder">
 			<Item Name="Clock Time.lvclass" Type="LVClass" URL="../Buses/Clock Time/Clock Time.lvclass"/>
+			<Item Name="Modbus.lvclass" Type="LVClass" URL="../Buses/Modbus/Modbus.lvclass"/>
 			<Item Name="NI Analog.lvclass" Type="LVClass" URL="../Buses/NI Analog/NI Analog.lvclass"/>
+			<Item Name="NI Digital to Analog.lvclass" Type="LVClass" URL="../Buses/NI Digital to Analog/NI Digital to Analog.lvclass"/>
 			<Item Name="Serial.lvclass" Type="LVClass" URL="../Buses/Serial/Serial.lvclass"/>
 			<Item Name="UDP.lvclass" Type="LVClass" URL="../Buses/UDP/UDP.lvclass"/>
-			<Item Name="Modbus.lvclass" Type="LVClass" URL="../Buses/Modbus/Modbus.lvclass"/>
+		</Item>
+		<Item Name="Initializers" Type="Folder">
+			<Item Name="String Init.lvclass" Type="LVClass" URL="../Initializers/String Init/String Init.lvclass"/>
+			<Item Name="No Init.lvclass" Type="LVClass" URL="../Initializers/No Init/No Init.lvclass"/>
+		</Item>
+		<Item Name="Outputs" Type="Folder">
+			<Item Name="All Channels.lvclass" Type="LVClass" URL="../Outputs/All Channels Out/All Channels.lvclass"/>
+			<Item Name="No Output.lvclass" Type="LVClass" URL="../Outputs/No Output/No Output.lvclass"/>
+			<Item Name="Single Channel.lvclass" Type="LVClass" URL="../Outputs/Single Channel Out/Single Channel.lvclass"/>
 		</Item>
 		<Item Name="Parsers" Type="Folder">
 			<Item Name="General Parser.lvclass" Type="LVClass" URL="../Parsers/General Parser/General Parser.lvclass"/>
@@ -53,15 +63,6 @@
 			<Item Name="Lookup Table.lvclass" Type="LVClass" URL="../Scalings/Lookup Table/Lookup Table.lvclass"/>
 			<Item Name="Polynomial.lvclass" Type="LVClass" URL="../Scalings/Polynomial/Polynomial.lvclass"/>
 		</Item>
-		<Item Name="Initializers" Type="Folder">
-			<Item Name="String Init.lvclass" Type="LVClass" URL="../Initializers/String Init/String Init.lvclass"/>
-			<Item Name="No Init.lvclass" Type="LVClass" URL="../Initializers/No Init/No Init.lvclass"/>
-		</Item>
-		<Item Name="Outputs" Type="Folder">
-			<Item Name="No Output.lvclass" Type="LVClass" URL="../Outputs/No Output/No Output.lvclass"/>
-			<Item Name="NI Analog Out.lvclass" Type="LVClass" URL="../Outputs/NI Analog Out/NI Analog Out.lvclass"/>
-			<Item Name="String Out.lvclass" Type="LVClass" URL="../Outputs/String Out/String Out.lvclass"/>
-		</Item>
 		<Item Name="Recorder" Type="Folder">
 			<Item Name="ICM Recorder.vi" Type="VI" URL="../Recorder/ICM Recorder.vi"/>
 			<Item Name="ICM Format.ctl" Type="VI" URL="../Recorder/ICM Format.ctl"/>
@@ -75,12 +76,11 @@
 		<Item Name="ICM Configuration Editor.vi" Type="VI" URL="../ICM Configuration Editor.vi"/>
 		<Item Name="Test Program.vi" Type="VI" URL="../Test Program.vi"/>
 		<Item Name="Bus.lvclass" Type="LVClass" URL="../Bus/Bus.lvclass"/>
+		<Item Name="Initialize.lvclass" Type="LVClass" URL="../Initialize/Initialize.lvclass"/>
+		<Item Name="Output.lvclass" Type="LVClass" URL="../Output/Output.lvclass"/>
 		<Item Name="Parser.lvclass" Type="LVClass" URL="../Parser/Parser.lvclass"/>
 		<Item Name="Query.lvclass" Type="LVClass" URL="../Query/Query.lvclass"/>
 		<Item Name="Scaling.lvclass" Type="LVClass" URL="../Scaling/Scaling.lvclass"/>
-		<Item Name="Initialize.lvclass" Type="LVClass" URL="../Initialize/Initialize.lvclass"/>
-		<Item Name="Output.lvclass" Type="LVClass" URL="../Output/Output.lvclass"/>
-		<Item Name="ICM Simulator State.ctl" Type="VI" URL="../Recorder/ICM Simulator State.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="DTbl Empty Digital.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DTblOps.llb/DTbl Empty Digital.vi"/>
@@ -350,13 +350,16 @@
 			</Item>
 			<Item Name="Modbus Config.ctl" Type="VI" URL="../Buses/Modbus/Modbus Config.ctl"/>
 			<Item Name="ICM Modbus Data Type.ctl" Type="VI" URL="../Buses/Modbus/ICM Modbus Data Type.ctl"/>
-			<Item Name="NI AO Type Def.ctl" Type="VI" URL="../Outputs/NI Analog Out/NI AO Type Def.ctl"/>
 			<Item Name="Output.ctl" Type="VI" URL="../Output/Output.ctl"/>
 			<Item Name="Lookup Table Config.ctl" Type="VI" URL="../Scalings/Lookup Table/Lookup Table Config.ctl"/>
 			<Item Name="Polynomial Config.ctl" Type="VI" URL="../Scalings/Polynomial/Polynomial Config.ctl"/>
-			<Item Name="String Out Type Def.ctl" Type="VI" URL="../Outputs/String Out/String Out Type Def.ctl"/>
 			<Item Name="OSDS Simulated Channel.ctl" Type="VI" URL="../../../MICAS-X/Resources/OSDS/OSDS Subvis/OSDS Simulated Channel.ctl"/>
 			<Item Name="ICM Create String.vi" Type="VI" URL="../Recorder/ICM Create String.vi"/>
+			<Item Name="ICM Locate Analog Phys Channels.vi" Type="VI" URL="../Buses/NI Analog/ICM Locate Analog Phys Channels.vi"/>
+			<Item Name="MICAS Find Serial Ports.vi" Type="VI" URL="../../../MICAS-X/Configuration/MICAS Find Serial Ports.vi"/>
+			<Item Name="ICM Simulator State.ctl" Type="VI" URL="../Recorder/ICM Simulator State.ctl"/>
+			<Item Name="Single Channel Type Def.ctl" Type="VI" URL="../Outputs/Single Channel Out/Single Channel Type Def.ctl"/>
+			<Item Name="All Channels Type Def.ctl" Type="VI" URL="../Outputs/All Channels Out/All Channels Type Def.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="ICM Tester" Type="EXE">
@@ -368,20 +371,21 @@
 				<Property Name="Bld_buildCacheID" Type="Str">{5871496E-FF73-4EAC-96B4-34C775508966}</Property>
 				<Property Name="Bld_buildSpecName" Type="Str">ICM Tester</Property>
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">/C/LabVIEW 2018 Builds/NI_AB_PROJECTNAME/Executables</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../Executables</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{E9BA2078-4799-4DD5-BE90-3CBBD87E8A12}</Property>
 				<Property Name="Bld_version.build" Type="Int">32</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">ICM Tester.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">/C/LabVIEW 2018 Builds/NI_AB_PROJECTNAME/Executables/ICM Tester.exe</Property>
-				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="Destination[0].path" Type="Path">../Executables/ICM Tester.exe</Property>
+				<Property Name="Destination[0].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">/C/LabVIEW 2018 Builds/NI_AB_PROJECTNAME/Executables/data</Property>
-				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="Destination[1].path" Type="Path">../Executables/data</Property>
+				<Property Name="Destination[1].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{860741DF-20F8-42CA-83CE-E766CEE3F4CF}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{0DAEDBA3-BAA5-4330-B430-B95FED7B85E7}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Test Program.vi</Property>
@@ -430,6 +434,18 @@
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../Source Distributions/data</Property>
 				<Property Name="Destination[1].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[10].destName" Type="Str">Initializers</Property>
+				<Property Name="Destination[10].path" Type="Path">../Source Distributions/Initializers</Property>
+				<Property Name="Destination[10].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[11].destName" Type="Str">Initialize</Property>
+				<Property Name="Destination[11].path" Type="Path">../Source Distributions/Initialize</Property>
+				<Property Name="Destination[11].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[12].destName" Type="Str">Outputs</Property>
+				<Property Name="Destination[12].path" Type="Path">../Source Distributions/Outputs</Property>
+				<Property Name="Destination[12].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[13].destName" Type="Str">Output</Property>
+				<Property Name="Destination[13].path" Type="Path">../Source Distributions/Output</Property>
+				<Property Name="Destination[13].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="Destination[2].destName" Type="Str">Buses</Property>
 				<Property Name="Destination[2].path" Type="Path">../Source Distributions/Buses</Property>
 				<Property Name="Destination[2].path.type" Type="Str">relativeToProject</Property>
@@ -454,8 +470,8 @@
 				<Property Name="Destination[9].destName" Type="Str">Scaling</Property>
 				<Property Name="Destination[9].path" Type="Path">../Source Distributions/Scaling</Property>
 				<Property Name="Destination[9].path.type" Type="Str">relativeToProject</Property>
-				<Property Name="DestinationCount" Type="Int">10</Property>
-				<Property Name="Source[0].itemID" Type="Str">{6767C708-BAA4-4B81-8780-BEF193906D1A}</Property>
+				<Property Name="DestinationCount" Type="Int">14</Property>
+				<Property Name="Source[0].itemID" Type="Str">{0DAEDBA3-BAA5-4330-B430-B95FED7B85E7}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[1].Container.applyInclusion" Type="Bool">true</Property>
@@ -477,22 +493,22 @@
 				<Property Name="Source[13].itemID" Type="Ref">/My Computer/Parsers/General Parser.lvclass</Property>
 				<Property Name="Source[13].type" Type="Str">Library</Property>
 				<Property Name="Source[14].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[14].itemID" Type="Ref"></Property>
+				<Property Name="Source[14].itemID" Type="Ref">/My Computer/Parsers/No-op Parser.lvclass</Property>
 				<Property Name="Source[14].type" Type="Str">Library</Property>
 				<Property Name="Source[15].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[15].itemID" Type="Ref">/My Computer/Parsers/No-op Parser.lvclass</Property>
+				<Property Name="Source[15].itemID" Type="Ref">/My Computer/Parsers/Time Parser.lvclass</Property>
 				<Property Name="Source[15].type" Type="Str">Library</Property>
 				<Property Name="Source[16].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[16].itemID" Type="Ref">/My Computer/Parsers/Time Parser.lvclass</Property>
+				<Property Name="Source[16].itemID" Type="Ref">/My Computer/Queries/No Query.lvclass</Property>
 				<Property Name="Source[16].type" Type="Str">Library</Property>
 				<Property Name="Source[17].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[17].itemID" Type="Ref">/My Computer/Queries/No Query.lvclass</Property>
+				<Property Name="Source[17].itemID" Type="Ref">/My Computer/Queries/Single Query.lvclass</Property>
 				<Property Name="Source[17].type" Type="Str">Library</Property>
 				<Property Name="Source[18].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[18].itemID" Type="Ref">/My Computer/Queries/Single Query.lvclass</Property>
+				<Property Name="Source[18].itemID" Type="Ref">/My Computer/Queries/Multiple Queries.lvclass</Property>
 				<Property Name="Source[18].type" Type="Str">Library</Property>
 				<Property Name="Source[19].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[19].itemID" Type="Ref">/My Computer/Queries/Multiple Queries.lvclass</Property>
+				<Property Name="Source[19].itemID" Type="Ref">/My Computer/Scalings/Lookup Table.lvclass</Property>
 				<Property Name="Source[19].type" Type="Str">Library</Property>
 				<Property Name="Source[2].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[2].Container.applyInclusion" Type="Bool">true</Property>
@@ -502,11 +518,28 @@
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[2].type" Type="Str">Container</Property>
 				<Property Name="Source[20].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[20].itemID" Type="Ref">/My Computer/Scalings/Lookup Table.lvclass</Property>
+				<Property Name="Source[20].itemID" Type="Ref">/My Computer/Scalings/Polynomial.lvclass</Property>
 				<Property Name="Source[20].type" Type="Str">Library</Property>
 				<Property Name="Source[21].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[21].itemID" Type="Ref">/My Computer/Scalings/Polynomial.lvclass</Property>
+				<Property Name="Source[21].itemID" Type="Ref">/My Computer/Output.lvclass</Property>
+				<Property Name="Source[21].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[21].type" Type="Str">Library</Property>
+				<Property Name="Source[22].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[22].itemID" Type="Ref">/My Computer/Initialize.lvclass</Property>
+				<Property Name="Source[22].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[22].type" Type="Str">Library</Property>
+				<Property Name="Source[23].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[23].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[23].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[23].itemID" Type="Ref">/My Computer/Initializers</Property>
+				<Property Name="Source[23].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[23].type" Type="Str">Container</Property>
+				<Property Name="Source[24].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[24].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[24].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[24].itemID" Type="Ref">/My Computer/Outputs</Property>
+				<Property Name="Source[24].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[24].type" Type="Str">Container</Property>
 				<Property Name="Source[3].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[3].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[3].Container.depDestIndex" Type="Int">0</Property>
@@ -540,7 +573,7 @@
 				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Buses/Clock Time.lvclass</Property>
 				<Property Name="Source[9].type" Type="Str">Library</Property>
-				<Property Name="SourceCount" Type="Int">22</Property>
+				<Property Name="SourceCount" Type="Int">25</Property>
 			</Item>
 		</Item>
 	</Item>
