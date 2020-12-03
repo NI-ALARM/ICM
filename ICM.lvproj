@@ -47,6 +47,7 @@
 			<Item Name="All Channels.lvclass" Type="LVClass" URL="../Outputs/All Channels Out/All Channels.lvclass"/>
 			<Item Name="No Output.lvclass" Type="LVClass" URL="../Outputs/No Output/No Output.lvclass"/>
 			<Item Name="Single Channel.lvclass" Type="LVClass" URL="../Outputs/Single Channel Out/Single Channel.lvclass"/>
+			<Item Name="No-Op Output.lvclass" Type="LVClass" URL="../Outputs/No-Op Output/No-Op Output.lvclass"/>
 		</Item>
 		<Item Name="Parsers" Type="Folder">
 			<Item Name="General Parser.lvclass" Type="LVClass" URL="../Parsers/General Parser/General Parser.lvclass"/>
@@ -360,6 +361,7 @@
 			<Item Name="ICM Simulator State.ctl" Type="VI" URL="../Recorder/ICM Simulator State.ctl"/>
 			<Item Name="Single Channel Type Def.ctl" Type="VI" URL="../Outputs/Single Channel Out/Single Channel Type Def.ctl"/>
 			<Item Name="All Channels Type Def.ctl" Type="VI" URL="../Outputs/All Channels Out/All Channels Type Def.ctl"/>
+			<Item Name="No-Op.ctl" Type="VI" URL="../Outputs/No-Op Output/No-Op.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="ICM Tester" Type="EXE">
