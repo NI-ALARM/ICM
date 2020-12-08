@@ -44,10 +44,10 @@
 			<Item Name="No Init.lvclass" Type="LVClass" URL="../Initializers/No Init/No Init.lvclass"/>
 		</Item>
 		<Item Name="Outputs" Type="Folder">
-			<Item Name="All Channels.lvclass" Type="LVClass" URL="../Outputs/All Channels Out/All Channels.lvclass"/>
 			<Item Name="No Output.lvclass" Type="LVClass" URL="../Outputs/No Output/No Output.lvclass"/>
 			<Item Name="Single Channel.lvclass" Type="LVClass" URL="../Outputs/Single Channel Out/Single Channel.lvclass"/>
 			<Item Name="No-Op Output.lvclass" Type="LVClass" URL="../Outputs/No-Op Output/No-Op Output.lvclass"/>
+			<Item Name="All Channels Out.lvclass" Type="LVClass" URL="../Outputs/All Channels Out/All Channels Out.lvclass"/>
 		</Item>
 		<Item Name="Parsers" Type="Folder">
 			<Item Name="General Parser.lvclass" Type="LVClass" URL="../Parsers/General Parser/General Parser.lvclass"/>
@@ -357,11 +357,11 @@
 			<Item Name="OSDS Simulated Channel.ctl" Type="VI" URL="../../../MICAS-X/Resources/OSDS/OSDS Subvis/OSDS Simulated Channel.ctl"/>
 			<Item Name="ICM Create String.vi" Type="VI" URL="../Recorder/ICM Create String.vi"/>
 			<Item Name="ICM Locate Analog Phys Channels.vi" Type="VI" URL="../Buses/NI Analog/ICM Locate Analog Phys Channels.vi"/>
-			<Item Name="MICAS Find Serial Ports.vi" Type="VI" URL="../../../MICAS-X/Configuration/MICAS Find Serial Ports.vi"/>
 			<Item Name="ICM Simulator State.ctl" Type="VI" URL="../Recorder/ICM Simulator State.ctl"/>
 			<Item Name="Single Channel Type Def.ctl" Type="VI" URL="../Outputs/Single Channel Out/Single Channel Type Def.ctl"/>
-			<Item Name="All Channels Type Def.ctl" Type="VI" URL="../Outputs/All Channels Out/All Channels Type Def.ctl"/>
 			<Item Name="No-Op.ctl" Type="VI" URL="../Outputs/No-Op Output/No-Op.ctl"/>
+			<Item Name="MICAS Find Serial Ports.vi" Type="VI" URL="../../../MICAS-X/Configuration/MICAS Find Serial Ports.vi"/>
+			<Item Name="All Channels Type Def.ctl" Type="VI" URL="../Outputs/All Channels Out/All Channels Type Def.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="ICM Tester" Type="EXE">
