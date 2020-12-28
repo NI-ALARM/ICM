@@ -352,8 +352,6 @@
 			<Item Name="Modbus Config.ctl" Type="VI" URL="../Buses/Modbus/Modbus Config.ctl"/>
 			<Item Name="ICM Modbus Data Type.ctl" Type="VI" URL="../Buses/Modbus/ICM Modbus Data Type.ctl"/>
 			<Item Name="Output.ctl" Type="VI" URL="../Output/Output.ctl"/>
-			<Item Name="Lookup Table Config.ctl" Type="VI" URL="../Scalings/Lookup Table/Lookup Table Config.ctl"/>
-			<Item Name="Polynomial Config.ctl" Type="VI" URL="../Scalings/Polynomial/Polynomial Config.ctl"/>
 			<Item Name="OSDS Simulated Channel.ctl" Type="VI" URL="../../../MICAS-X/Resources/OSDS/OSDS Subvis/OSDS Simulated Channel.ctl"/>
 			<Item Name="ICM Create String.vi" Type="VI" URL="../Recorder/ICM Create String.vi"/>
 			<Item Name="ICM Locate Analog Phys Channels.vi" Type="VI" URL="../Buses/NI Analog/ICM Locate Analog Phys Channels.vi"/>
@@ -362,6 +360,8 @@
 			<Item Name="No-Op.ctl" Type="VI" URL="../Outputs/No-Op Output/No-Op.ctl"/>
 			<Item Name="MICAS Find Serial Ports.vi" Type="VI" URL="../../../MICAS-X/Configuration/MICAS Find Serial Ports.vi"/>
 			<Item Name="All Channels Type Def.ctl" Type="VI" URL="../Outputs/All Channels Out/All Channels Type Def.ctl"/>
+			<Item Name="Lookup Table Config.ctl" Type="VI" URL="../Scalings/Lookup Table/Lookup Table Config.ctl"/>
+			<Item Name="Polynomial Config.ctl" Type="VI" URL="../Scalings/Polynomial/Polynomial Config.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="ICM Tester" Type="EXE">
