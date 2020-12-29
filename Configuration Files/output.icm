@@ -1,0 +1,96 @@
+
+[ICM General Parameters]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Data Stream Name=
+Version=0
+Author=
+Description=
+Comments=
+Date=3691983600
+Time=56478.65474892
+Location=
+# of Records=0
+
+[Query Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=No Query
+
+[No Query]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+null=0
+
+[Initializer Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=No Init
+
+[No Init]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+null=0
+
+[Parser Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=No-op Parser
+
+[Time Parser]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Enabled=<1>
+Enabled 0=TRUE
+UTC?=FALSE
+
+[Output Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=No-Op Output
+
+[All Channels Out]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Channel Names=<2>
+Channel Names 0=Channel 1
+Channel Names 1=channel 2
+Enabled=<2>
+Enabled 0=TRUE
+Enabled 1=TRUE
+Format Specifiers=<0>
+String Header=
+Use Same Format Specifier line*~|.feedFor All Channels=FALSE
+Delimeter=
+
+[Bus Name]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+name=NI Digital to Analog
+
+[Clock Time]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+UTC?=FALSE
+
+[NI Digital to Analog]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Device=cDAQ1Mod4
+SE/Diff=FALSE
+Channels=<4>
+Channels 0.Channel.Channel=0
+Channels 0.Channel.Range=-10.0 to 10.0 V
+Channels 1.Channel.Channel=1
+Channels 1.Channel.Range=-10.0 to 10.0 V
+Channels 2.Channel.Channel=2
+Channels 2.Channel.Range=-10.0 to 10.0 V
+Channels 3.Channel.Channel=3
+Channels 3.Channel.Range=-10.0 to 10.0 V
+
+[No-Op Output]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Channels=<4>
+Channels 0=1
+Channels 1=2
+Channels 2=3
+Channels 3=4
+Enabled=<4>
+Enabled 0=TRUE
+Enabled 1=TRUE
+Enabled 2=TRUE
+Enabled 3=TRUE
+Initial Values=<4>0,1,2,3
+
+[No-op Parser]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Channels=<0>
+Enabled=<0>
