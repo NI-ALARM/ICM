@@ -14,8 +14,8 @@ Version=0
 Author=
 Description=
 Comments=
-Date=3688959600
-Time=55938.08234406
+Date=3692242800
+Time=41010.05940723
 Location=
 # of Records=0
 
@@ -27,3 +27,11 @@ name=No-op Parser
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
 Channels=<0>
 Enabled=<0>
+
+[Polynomial]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Polynomials=<2>
+Polynomials 0.Cluster.Instance=
+Polynomials 0.Cluster.Polynomial=<0>
+Polynomials 1.Cluster.Instance=dasf
+Polynomials 1.Cluster.Polynomial=<0>

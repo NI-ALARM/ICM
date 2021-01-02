@@ -1,13 +1,15 @@
 [ICM General Parameters]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
 Data Stream Name=NI A/D test
 Version=1
 Author=David Thomson
 Description=test the NI A/D bus and no-op parser
 Comments=
-Date=0
-Start Time=0
+Date=3692070000
+Time=74590.96010399
 Location=
 # of Records=0
+
 [Query]
 Cycle Time (ms)=1000
 [Bus Name]

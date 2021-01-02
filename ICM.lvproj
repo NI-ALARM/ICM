@@ -44,10 +44,10 @@
 			<Item Name="No Init.lvclass" Type="LVClass" URL="../Initializers/No Init/No Init.lvclass"/>
 		</Item>
 		<Item Name="Outputs" Type="Folder">
-			<Item Name="No Output.lvclass" Type="LVClass" URL="../Outputs/No Output/No Output.lvclass"/>
-			<Item Name="Single Channel.lvclass" Type="LVClass" URL="../Outputs/Single Channel Out/Single Channel.lvclass"/>
-			<Item Name="No-Op Output.lvclass" Type="LVClass" URL="../Outputs/No-Op Output/No-Op Output.lvclass"/>
 			<Item Name="All Channels Out.lvclass" Type="LVClass" URL="../Outputs/All Channels Out/All Channels Out.lvclass"/>
+			<Item Name="No Output.lvclass" Type="LVClass" URL="../Outputs/No Output/No Output.lvclass"/>
+			<Item Name="No-Op Output.lvclass" Type="LVClass" URL="../Outputs/No-Op Output/No-Op Output.lvclass"/>
+			<Item Name="Single Channel.lvclass" Type="LVClass" URL="../Outputs/Single Channel Out/Single Channel.lvclass"/>
 		</Item>
 		<Item Name="Parsers" Type="Folder">
 			<Item Name="General Parser.lvclass" Type="LVClass" URL="../Parsers/General Parser/General Parser.lvclass"/>
@@ -64,18 +64,11 @@
 			<Item Name="Lookup Table.lvclass" Type="LVClass" URL="../Scalings/Lookup Table/Lookup Table.lvclass"/>
 			<Item Name="Polynomial.lvclass" Type="LVClass" URL="../Scalings/Polynomial/Polynomial.lvclass"/>
 		</Item>
-		<Item Name="Recorder" Type="Folder">
-			<Item Name="ICM Recorder.vi" Type="VI" URL="../Recorder/ICM Recorder.vi"/>
-			<Item Name="ICM Format.ctl" Type="VI" URL="../Recorder/ICM Format.ctl"/>
-			<Item Name="Calculate Time and Date.vi" Type="VI" URL="../Recorder/Calculate Time and Date.vi"/>
-			<Item Name="ICM Read Write Format.vi" Type="VI" URL="../Recorder/ICM Read Write Format.vi"/>
-			<Item Name="ICM Recorder State.ctl" Type="VI" URL="../Recorder/ICM Recorder State.ctl"/>
-			<Item Name="ICM Extract Data.vi" Type="VI" URL="../Recorder/ICM Extract Data.vi"/>
-			<Item Name="ICM Calculate Records.vi" Type="VI" URL="../Recorder/ICM Calculate Records.vi"/>
-			<Item Name="ICM Play Back.vi" Type="VI" URL="../Recorder/ICM Play Back.vi"/>
-		</Item>
 		<Item Name="ICM Configuration Editor.vi" Type="VI" URL="../ICM Configuration Editor.vi"/>
-		<Item Name="Test Program.vi" Type="VI" URL="../Test Program.vi"/>
+		<Item Name="ICM Recorder.vi" Type="VI" URL="../Recorder/ICM Recorder.vi"/>
+		<Item Name="ICM Test Program.vi" Type="VI" URL="../ICM Test Program.vi"/>
+		<Item Name="ICM Parsing Test.vi" Type="VI" URL="../ICM Parsing Test.vi"/>
+		<Item Name="ICM Manual.doc" Type="Document" URL="../Documentation/ICM Manual.doc"/>
 		<Item Name="Bus.lvclass" Type="LVClass" URL="../Bus/Bus.lvclass"/>
 		<Item Name="Initialize.lvclass" Type="LVClass" URL="../Initialize/Initialize.lvclass"/>
 		<Item Name="Output.lvclass" Type="LVClass" URL="../Output/Output.lvclass"/>
@@ -352,16 +345,16 @@
 			<Item Name="Modbus Config.ctl" Type="VI" URL="../Buses/Modbus/Modbus Config.ctl"/>
 			<Item Name="ICM Modbus Data Type.ctl" Type="VI" URL="../Buses/Modbus/ICM Modbus Data Type.ctl"/>
 			<Item Name="Output.ctl" Type="VI" URL="../Output/Output.ctl"/>
-			<Item Name="OSDS Simulated Channel.ctl" Type="VI" URL="../../../MICAS-X/Resources/OSDS/OSDS Subvis/OSDS Simulated Channel.ctl"/>
-			<Item Name="ICM Create String.vi" Type="VI" URL="../Recorder/ICM Create String.vi"/>
 			<Item Name="ICM Locate Analog Phys Channels.vi" Type="VI" URL="../Buses/NI Analog/ICM Locate Analog Phys Channels.vi"/>
-			<Item Name="ICM Simulator State.ctl" Type="VI" URL="../Recorder/ICM Simulator State.ctl"/>
 			<Item Name="Single Channel Type Def.ctl" Type="VI" URL="../Outputs/Single Channel Out/Single Channel Type Def.ctl"/>
 			<Item Name="No-Op.ctl" Type="VI" URL="../Outputs/No-Op Output/No-Op.ctl"/>
-			<Item Name="MICAS Find Serial Ports.vi" Type="VI" URL="../../../MICAS-X/Configuration/MICAS Find Serial Ports.vi"/>
 			<Item Name="All Channels Type Def.ctl" Type="VI" URL="../Outputs/All Channels Out/All Channels Type Def.ctl"/>
 			<Item Name="Lookup Table Config.ctl" Type="VI" URL="../Scalings/Lookup Table/Lookup Table Config.ctl"/>
 			<Item Name="Polynomial Config.ctl" Type="VI" URL="../Scalings/Polynomial/Polynomial Config.ctl"/>
+			<Item Name="ICM Recorder State.ctl" Type="VI" URL="../Recorder/ICM Recorder State.ctl"/>
+			<Item Name="ICM Read Write Format.vi" Type="VI" URL="../Recorder/ICM Read Write Format.vi"/>
+			<Item Name="ICM Extract Data.vi" Type="VI" URL="../Recorder/ICM Extract Data.vi"/>
+			<Item Name="ICM Calculate Records.vi" Type="VI" URL="../Recorder/ICM Calculate Records.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="ICM Tester" Type="EXE">
@@ -390,7 +383,7 @@
 				<Property Name="Source[0].itemID" Type="Str">{0DAEDBA3-BAA5-4330-B430-B95FED7B85E7}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Test Program.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/ICM Test Program.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
