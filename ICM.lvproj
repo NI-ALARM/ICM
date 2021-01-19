@@ -83,7 +83,6 @@
 		<Item Name="Scaling.lvclass" Type="LVClass" URL="../Scaling/Scaling.lvclass"/>
 		<Item Name="ICM Test Program.vi" Type="VI" URL="../ICM Test Program.vi"/>
 		<Item Name="ICM Simple Read Program(Scaling).vi" Type="VI" URL="../ICM Simple Read Program(Scaling).vi"/>
-		<Item Name="ICM Simple Read Program(NoScaling).vi" Type="VI" URL="../ICM Simple Read Program(NoScaling).vi"/>
 		<Item Name="ICM Simple Read Program(NoScaling,NoInit).vi" Type="VI" URL="../ICM Simple Read Program(NoScaling,NoInit).vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -362,6 +361,8 @@
 			<Item Name="No-Op.ctl" Type="VI" URL="../Outputs/No-Op Output/No-Op.ctl"/>
 			<Item Name="All Channels Type Def.ctl" Type="VI" URL="../Outputs/All Channels Out/All Channels Type Def.ctl"/>
 			<Item Name="ICM Parsing Test.vi" Type="VI" URL="../ICM Parsing Test.vi"/>
+			<Item Name="Lookup Table Config.ctl" Type="VI" URL="../Scalings/Lookup Table/Lookup Table Config.ctl"/>
+			<Item Name="Polynomial Config.ctl" Type="VI" URL="../Scalings/Polynomial/Polynomial Config.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="ICM Tester" Type="EXE">
