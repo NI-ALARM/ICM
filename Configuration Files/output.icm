@@ -6,8 +6,8 @@ Version=0
 Author=
 Description=
 Comments=
-Date=3692156400
-Time=56822.92486382
+Date=3694402800
+Time=50449.51653194
 Location=
 # of Records=0
 
@@ -92,5 +92,12 @@ Initial Values=<4>0,1,2,3
 
 [No-op Parser]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
-Channels=<0>
+Channels=<1>
+Channels 0=h
 Enabled=<0>
+
+[Polynomial]
+MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
+Polynomials=<1>
+Polynomials 0.Cluster.Instance=bk
+Polynomials 0.Cluster.Polynomial=<0>
