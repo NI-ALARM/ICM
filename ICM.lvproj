@@ -363,6 +363,7 @@
 			<Item Name="ICM Parsing Test.vi" Type="VI" URL="../ICM Parsing Test.vi"/>
 			<Item Name="Lookup Table Config.ctl" Type="VI" URL="../Scalings/Lookup Table/Lookup Table Config.ctl"/>
 			<Item Name="Polynomial Config.ctl" Type="VI" URL="../Scalings/Polynomial/Polynomial Config.ctl"/>
+			<Item Name="Output.ctl" Type="VI" URL="../Output/Output.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="ICM Tester" Type="EXE">

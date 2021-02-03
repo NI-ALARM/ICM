@@ -1,4 +1,4 @@
-
+ eL eD e< e4  5õ  5ð
 [ICM General Parameters]
 MGI RWA Section Options=2.0.1 %04Y%02m%02d %02H%02M%S%25u*~|.%d*~|.,*~|.%#_13g
 Data Stream Name=GPS GGA data
@@ -6,8 +6,8 @@ Version=0
 Author=Davita
 Description=GPS data 
 Comments=
-Date=3693366000
-Time=43062.9492383
+Date=3694575600
+Time=57637.04008627
 Location=
 # of Records=0
 
