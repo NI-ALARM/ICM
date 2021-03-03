@@ -84,6 +84,8 @@
 		<Item Name="ICM Test Program.vi" Type="VI" URL="../ICM Test Program.vi"/>
 		<Item Name="ICM Simple Read Program(Scaling).vi" Type="VI" URL="../ICM Simple Read Program(Scaling).vi"/>
 		<Item Name="ICM Simple Read Program(NoScaling,NoInit).vi" Type="VI" URL="../ICM Simple Read Program(NoScaling,NoInit).vi"/>
+		<Item Name="CalTestVi.vi" Type="VI" URL="../../../MICAS-X/Calculations/Dot Product/CalTestVi.vi"/>
+		<Item Name="Surface Fitting.vi" Type="VI" URL="../../../MICAS-X/Calculations/Dot Product/Surface Fitting.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="DTbl Empty Digital.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DTblOps.llb/DTbl Empty Digital.vi"/>
@@ -296,6 +298,8 @@
 				<Item Name="DAQmx Write (Counter 1D Frequency 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/write.llb/DAQmx Write (Counter 1D Frequency 1Chan NSamp).vi"/>
 				<Item Name="DAQmx Write (Counter 1D Ticks 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/write.llb/DAQmx Write (Counter 1D Ticks 1Chan NSamp).vi"/>
 				<Item Name="DAQmx Write (Counter 1D Time 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/write.llb/DAQmx Write (Counter 1D Time 1Chan NSamp).vi"/>
+				<Item Name="NI_3dgraph.lvlib" Type="Library" URL="/&lt;vilib&gt;/Platform/NI_3dgraph.lvlib"/>
+				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
 			</Item>
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="MGI Read Anything.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI Read Anything.vi"/>
@@ -364,6 +368,8 @@
 			<Item Name="Lookup Table Config.ctl" Type="VI" URL="../Scalings/Lookup Table/Lookup Table Config.ctl"/>
 			<Item Name="Polynomial Config.ctl" Type="VI" URL="../Scalings/Polynomial/Polynomial Config.ctl"/>
 			<Item Name="Output.ctl" Type="VI" URL="../Output/Output.ctl"/>
+			<Item Name="Calculate Parabola X Max.vi" Type="VI" URL="../../../MICAS-X/Calculations/Dot Product/Calculate Parabola X Max.vi"/>
+			<Item Name="Normalize.vi" Type="VI" URL="../../../MICAS-X/Calculations/Dot Product/Normalize.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="ICM Tester" Type="EXE">
@@ -430,7 +436,7 @@
 				<Property Name="Bld_localDestDir" Type="Path">../Source Distributions</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{F13B94CE-39DA-4871-A8DB-0733E819ACA4}</Property>
-				<Property Name="Bld_version.build" Type="Int">6</Property>
+				<Property Name="Bld_version.build" Type="Int">7</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
 				<Property Name="Destination[0].path" Type="Path">../Source Distributions</Property>
@@ -475,7 +481,7 @@
 				<Property Name="Destination[9].path" Type="Path">../Source Distributions/Scaling</Property>
 				<Property Name="Destination[9].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="DestinationCount" Type="Int">14</Property>
-				<Property Name="Source[0].itemID" Type="Str">{0DAEDBA3-BAA5-4330-B430-B95FED7B85E7}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{44BB729D-35C2-400C-958E-7E113AEAE942}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[1].Container.applyInclusion" Type="Bool">true</Property>
@@ -578,6 +584,82 @@
 				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Buses/Clock Time.lvclass</Property>
 				<Property Name="Source[9].type" Type="Str">Library</Property>
 				<Property Name="SourceCount" Type="Int">25</Property>
+			</Item>
+			<Item Name="My Package" Type="{E661DAE2-7517-431F-AC41-30807A3BDA38}">
+				<Property Name="NIPKG_license" Type="Ref"></Property>
+				<Property Name="NIPKG_releaseNotes" Type="Str"></Property>
+				<Property Name="PKG_actions.Count" Type="Int">0</Property>
+				<Property Name="PKG_autoIncrementBuild" Type="Bool">true</Property>
+				<Property Name="PKG_autoSelectDeps" Type="Bool">true</Property>
+				<Property Name="PKG_buildNumber" Type="Int">1</Property>
+				<Property Name="PKG_buildSpecName" Type="Str">My Package</Property>
+				<Property Name="PKG_dependencies.Count" Type="Int">4</Property>
+				<Property Name="PKG_dependencies[0].Enhanced" Type="Bool">false</Property>
+				<Property Name="PKG_dependencies[0].MaxVersion" Type="Str"></Property>
+				<Property Name="PKG_dependencies[0].MaxVersionInclusive" Type="Bool">false</Property>
+				<Property Name="PKG_dependencies[0].MinVersion" Type="Str"></Property>
+				<Property Name="PKG_dependencies[0].MinVersionType" Type="Str">Inclusive</Property>
+				<Property Name="PKG_dependencies[0].NIPKG.DisplayName" Type="Str">NI-VISA Runtime</Property>
+				<Property Name="PKG_dependencies[0].Package.Name" Type="Str">ni-visa-runtime</Property>
+				<Property Name="PKG_dependencies[0].Package.Section" Type="Str">Drivers</Property>
+				<Property Name="PKG_dependencies[0].Package.Synopsis" Type="Str">Provides an API for controlling USB, TCPIP, GPIB, Serial, PXI, and other types of instruments.</Property>
+				<Property Name="PKG_dependencies[0].Relationship" Type="Str">Required Dependency</Property>
+				<Property Name="PKG_dependencies[0].Type" Type="Str">NIPKG</Property>
+				<Property Name="PKG_dependencies[1].Enhanced" Type="Bool">false</Property>
+				<Property Name="PKG_dependencies[1].MaxVersion" Type="Str"></Property>
+				<Property Name="PKG_dependencies[1].MaxVersionInclusive" Type="Bool">false</Property>
+				<Property Name="PKG_dependencies[1].MinVersion" Type="Str"></Property>
+				<Property Name="PKG_dependencies[1].MinVersionType" Type="Str">Inclusive</Property>
+				<Property Name="PKG_dependencies[1].NIPKG.DisplayName" Type="Str">NI-DAQmx Runtime</Property>
+				<Property Name="PKG_dependencies[1].Package.Name" Type="Str">ni-daqmx-runtime-core</Property>
+				<Property Name="PKG_dependencies[1].Package.Section" Type="Str">Drivers</Property>
+				<Property Name="PKG_dependencies[1].Package.Synopsis" Type="Str">Run-time components required to deploy applications using National Instruments data acquisition devices.</Property>
+				<Property Name="PKG_dependencies[1].Relationship" Type="Str">Required Dependency</Property>
+				<Property Name="PKG_dependencies[1].Type" Type="Str">NIPKG</Property>
+				<Property Name="PKG_dependencies[2].Enhanced" Type="Bool">false</Property>
+				<Property Name="PKG_dependencies[2].MaxVersion" Type="Str"></Property>
+				<Property Name="PKG_dependencies[2].MaxVersionInclusive" Type="Bool">false</Property>
+				<Property Name="PKG_dependencies[2].MinVersion" Type="Str"></Property>
+				<Property Name="PKG_dependencies[2].MinVersionType" Type="Str">Inclusive</Property>
+				<Property Name="PKG_dependencies[2].Package.Name" Type="Str">ni-labview-2018-runtime-engine-x86</Property>
+				<Property Name="PKG_dependencies[2].Package.Section" Type="Str"></Property>
+				<Property Name="PKG_dependencies[2].Package.Synopsis" Type="Str"></Property>
+				<Property Name="PKG_dependencies[2].Relationship" Type="Str">Required Dependency</Property>
+				<Property Name="PKG_dependencies[2].Type" Type="Str">Package</Property>
+				<Property Name="PKG_dependencies[3].Enhanced" Type="Bool">false</Property>
+				<Property Name="PKG_dependencies[3].MaxVersion" Type="Str"></Property>
+				<Property Name="PKG_dependencies[3].MaxVersionInclusive" Type="Bool">false</Property>
+				<Property Name="PKG_dependencies[3].MinVersion" Type="Str"></Property>
+				<Property Name="PKG_dependencies[3].MinVersionType" Type="Str">Inclusive</Property>
+				<Property Name="PKG_dependencies[3].NIPKG.DisplayName" Type="Str">NI-Serial Runtime</Property>
+				<Property Name="PKG_dependencies[3].Package.Name" Type="Str">ni-serial-runtime</Property>
+				<Property Name="PKG_dependencies[3].Package.Section" Type="Str">Drivers</Property>
+				<Property Name="PKG_dependencies[3].Package.Synopsis" Type="Str">NI-Serial support for National Instruments RS-232 and RS-485 Hardware.</Property>
+				<Property Name="PKG_dependencies[3].Relationship" Type="Str">Required Dependency</Property>
+				<Property Name="PKG_dependencies[3].Type" Type="Str">NIPKG</Property>
+				<Property Name="PKG_description" Type="Str"></Property>
+				<Property Name="PKG_destinations.Count" Type="Int">1</Property>
+				<Property Name="PKG_destinations[0].ID" Type="Str">{4CDAFA5F-9C5E-452C-A993-C26EB3426EA0}</Property>
+				<Property Name="PKG_destinations[0].Subdir.Directory" Type="Str">ICM</Property>
+				<Property Name="PKG_destinations[0].Subdir.Parent" Type="Str">root_5</Property>
+				<Property Name="PKG_destinations[0].Type" Type="Str">Subdir</Property>
+				<Property Name="PKG_displayName" Type="Str">My Package</Property>
+				<Property Name="PKG_displayVersion" Type="Str"></Property>
+				<Property Name="PKG_homepage" Type="Str"></Property>
+				<Property Name="PKG_lvrteTracking" Type="Str">ni-labview-2018-runtime-engine-x86</Property>
+				<Property Name="PKG_maintainer" Type="Str">original code consulting &lt;&gt;</Property>
+				<Property Name="PKG_output" Type="Path">../builds/NI_AB_PROJECTNAME/My Package</Property>
+				<Property Name="PKG_output.Type" Type="Str">relativeToCommon</Property>
+				<Property Name="PKG_packageName" Type="Str">icm</Property>
+				<Property Name="PKG_ProviderVersion" Type="Int">1820</Property>
+				<Property Name="PKG_section" Type="Str">Application Software</Property>
+				<Property Name="PKG_shortcuts.Count" Type="Int">0</Property>
+				<Property Name="PKG_sources.Count" Type="Int">1</Property>
+				<Property Name="PKG_sources[0].Destination" Type="Str">{4CDAFA5F-9C5E-452C-A993-C26EB3426EA0}</Property>
+				<Property Name="PKG_sources[0].ID" Type="Ref">/My Computer/Build Specifications/ICM Source Distributions</Property>
+				<Property Name="PKG_sources[0].Type" Type="Str">Build</Property>
+				<Property Name="PKG_synopsis" Type="Str">ICM</Property>
+				<Property Name="PKG_version" Type="Str">1.0.0</Property>
 			</Item>
 		</Item>
 	</Item>
