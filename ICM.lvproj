@@ -74,6 +74,9 @@
 			<Item Name="ICM Calculate Records.vi" Type="VI" URL="../Recorder/ICM Calculate Records.vi"/>
 			<Item Name="ICM Play Back.vi" Type="VI" URL="../Recorder/ICM Play Back.vi"/>
 		</Item>
+		<Item Name="Documentation" Type="Folder" URL="../Documentation">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="ICM Configuration Editor.vi" Type="VI" URL="../ICM Configuration Editor.vi"/>
 		<Item Name="Bus.lvclass" Type="LVClass" URL="../Bus/Bus.lvclass"/>
 		<Item Name="Initialize.lvclass" Type="LVClass" URL="../Initialize/Initialize.lvclass"/>
@@ -84,8 +87,6 @@
 		<Item Name="ICM Test Program.vi" Type="VI" URL="../ICM Test Program.vi"/>
 		<Item Name="ICM Simple Read Program(Scaling).vi" Type="VI" URL="../ICM Simple Read Program(Scaling).vi"/>
 		<Item Name="ICM Simple Read Program(NoScaling,NoInit).vi" Type="VI" URL="../ICM Simple Read Program(NoScaling,NoInit).vi"/>
-		<Item Name="CalTestVi.vi" Type="VI" URL="../../../MICAS-X/Calculations/Dot Product/CalTestVi.vi"/>
-		<Item Name="Surface Fitting.vi" Type="VI" URL="../../../MICAS-X/Calculations/Dot Product/Surface Fitting.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="DTbl Empty Digital.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DTblOps.llb/DTbl Empty Digital.vi"/>
@@ -298,8 +299,6 @@
 				<Item Name="DAQmx Write (Counter 1D Frequency 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/write.llb/DAQmx Write (Counter 1D Frequency 1Chan NSamp).vi"/>
 				<Item Name="DAQmx Write (Counter 1D Ticks 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/write.llb/DAQmx Write (Counter 1D Ticks 1Chan NSamp).vi"/>
 				<Item Name="DAQmx Write (Counter 1D Time 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/write.llb/DAQmx Write (Counter 1D Time 1Chan NSamp).vi"/>
-				<Item Name="NI_3dgraph.lvlib" Type="Library" URL="/&lt;vilib&gt;/Platform/NI_3dgraph.lvlib"/>
-				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
 			</Item>
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="MGI Read Anything.vi" Type="VI" URL="/&lt;userlib&gt;/_MGI/Read Write Anything/MGI Read Anything.vi"/>
@@ -368,8 +367,6 @@
 			<Item Name="Lookup Table Config.ctl" Type="VI" URL="../Scalings/Lookup Table/Lookup Table Config.ctl"/>
 			<Item Name="Polynomial Config.ctl" Type="VI" URL="../Scalings/Polynomial/Polynomial Config.ctl"/>
 			<Item Name="Output.ctl" Type="VI" URL="../Output/Output.ctl"/>
-			<Item Name="Calculate Parabola X Max.vi" Type="VI" URL="../../../MICAS-X/Calculations/Dot Product/Calculate Parabola X Max.vi"/>
-			<Item Name="Normalize.vi" Type="VI" URL="../../../MICAS-X/Calculations/Dot Product/Normalize.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="ICM Tester" Type="EXE">
